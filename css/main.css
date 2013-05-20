@@ -4,6 +4,11 @@
    Author's custom styles
    ========================================================================== */
 
+div.hero-unit { 
+                background-color: transparent;
+                text-align: center;
+                border: 1px solid black;
+                }
 
 
 
