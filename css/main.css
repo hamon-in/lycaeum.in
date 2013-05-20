@@ -11,9 +11,19 @@ div.hero-unit {
 
                 }
 
+div.navbar { 
+             font-family: 'Josefin Slab', serif;
+ }
 
 h2 { 
      text-align: center;
+     font-family: 'Josefin Slab', serif;
+     font-variant: small-caps;
+
+ }
+
+div.row p { 
+            font-family: 'Quando', serif;
  }
 
 
