@@ -27,6 +27,14 @@ div.row p {
  }
 
 
+footer { 
+         font-weight: 300;
+         font-family: 'Josefin Slab', serif;
+         padding:0;
+         margin:0;
+
+ }
+
 
 
 /* Customize the navbar links to be fill the entire space of the .navbar */
