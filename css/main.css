@@ -14,6 +14,7 @@ div.navbar {
              font-family: 'Josefin Slab', serif;
  }
 
+
 h2 { 
      text-align: center;
      font-family: 'Josefin Slab', serif;
@@ -45,6 +46,11 @@ footer {
                display: table;
                width: 100%;
                }
+
+.navbar-inner { 
+                  border-radius: 20px;
+                }
+
 .navbar .nav li {
                   display: table-cell;
                   width: 1%;
@@ -53,16 +59,16 @@ footer {
 .navbar .nav li a {
                     font-weight: bold;
                     text-align: center;
-                    border-left: 1px solid rgba(255,255,255,.75);
+                    /* border-left: 1px solid rgba(255,255,255,.75); */
                     border-right: 1px solid rgba(0,0,0,.1);
                     }
 .navbar .nav li:first-child a {
                                 border-left: 0;
-                                border-radius: 3px 0 0 3px;
+                                border-radius: 20px 0 0 20px;
                                 }
 .navbar .nav li:last-child a {
                                border-right: 0;
-                               border-radius: 0 3px 3px 0;
+                               border-radius: 0 20px 20px 0;
                                }
 
 
