@@ -21,7 +21,7 @@ First, we try to find the number of chapters in the book. This is not too hard. 
 {% highlight bash %}
 grep -iw chapter moby-dick.txt | wc -l
 {% endhighlight %}
-and we get `172`. So we know that it has (rougly) 172 chapters. The `-i` option to grep makes the search case insensitive (we match `Chapter` and `chapter`). The `-w` restricts the pattern to word boundaries. So, we won't match things like `chapters`.
+and we get `172`. So we know that it has (roughly) 172 chapters. The `-i` option to grep makes the search case insensitive (we match `Chapter` and `chapter`). The `-w` restricts the pattern to word boundaries. So, we won't match things like `chapters`.
 
 Next, we try to get the number of pages in the book. A typical paperback book, which is the kind I'd get if I bought a paper copy of Moby Dick, has approximately 350 words on a page (35 lines per page and 10 words per line). I know this because I actually counted them on 10 books. We can get this using
 {% highlight bash %}
@@ -172,4 +172,4 @@ paste <(cat moby-dick.txt| tr '[A-Z]' '[a-z]' | tr -sC '[a-z0-9]' '\n') <(cat mo
 
 I think these tools are not sufficiently advertised in the modern developer community and it's a loss for them. I'm planning to put together a [course that teaches these skills](http://nibrahim.net.in/2013/08/03/unix_command_line_course.html) which I'm going to hold in Bangalore later this year. You should sign up onto my [trainings list](https://lists.hcoop.net/listinfo/trainings) or follow me on [twitter](https://twitter.com/noufalibrahim) if you want to know when I'm ready.
 
-This course is also going to be a part of a larger bootcamp style thing which I'm doing under the Lycӕum banner so stay tuned. 
+This course is also going to be a part of a larger boot camp style thing which I'm doing under the Lycӕum banner so stay tuned. 
