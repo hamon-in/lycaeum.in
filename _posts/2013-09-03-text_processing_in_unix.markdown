@@ -4,8 +4,8 @@ title: "Text processing in UNIX"
 date: "2013-09-03 16:12:52 +0530"
 ---
 
-Introduction
-------------
+### Introduction
+
 
 I've been conducting a series of workshops at engineering colleges in Kerala. It's a 2 day presentation titled "Programming as Engineering" and designed to inspire rather than instruct. It is structured as 5 separate "topics" viz. UNIX, Optimisation, Higher order functions, Data structures and small languages. They're distinct from each other so that I have the flexibility to cut it into a shorter one day course if necessary. I've conducted it five times now and it's been fairly well received.
 
@@ -13,8 +13,8 @@ I took a tiny piece of the UNIX presentation and delivered it as a lightning tal
 
 To run this, I took a copy of [Moby Dick from the Gutenberg project website](http://www.gutenberg.org/cache/epub/2701/pg2701.txt). I excised the headers and footers added by the project and scrubbed the file to use UNIX newlines. The exercise is to get as much information from the book as possible without actually reading it. I was inspired to do this from [Sherlock Holmes' trick in the beginning of the Valley of Fear](http://www.archive.org/stream/valleyfearasher00doylgoog#page/n16/mode/2up) where the detective deduces the name of a book from some information that one of his agents send him.
 
-The analysis
-------------
+### The analysis
+
 I use zsh version 4.3.17 on Debian. These examples are tested with that shell but they should work with bash too since I don't use too many esoteric features.
 
 First, we try to find the number of chapters in the book. This is not too hard. We simply run this.
