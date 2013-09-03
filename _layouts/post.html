@@ -1,0 +1,32 @@
+---
+layout: base
+---
+<div class="navbar span7 offset2">
+  <div class="navbar-inner">
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+    <div class="nav-collapse collapse">
+      <ul class="nav">
+        <li ><a href="/index.html">About</a></li>
+        <li class="active"><a href="/blog/index.html">Blog</a></li>
+        <li ><a href="/resources.html">Resources</a></li>
+        <li ><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<!-- Example row of columns -->
+<div class="row">
+  <div class="span8 offset2">
+    <h2>{{page.title}}</h2>
+    {{ content }}
+    <p class="meta">Posted on: {{ page.date | date_to_string }}</p>
+  </div>
+
+</div>
+
+
