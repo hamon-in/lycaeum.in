@@ -19,12 +19,18 @@ layout: base
   </div>
 </div>
 
+
+
 <!-- Example row of columns -->
 <div class="row">
   <div class="span8 offset2">
     <h2>{{page.title}}</h2>
+    <a id="rss" href="/rss.xml"><img src="/img/rss_icon.png"/></a>
     {{ content }}
+    {% if page.date %}
     <p class="meta">Posted on: {{ page.date | date_to_string }}</p>
+    {%endif%}
+    
   </div>
 
 </div>

@@ -1,2 +1,9 @@
 name: The Lycӕum
+plugins: ./_plugins
+url: http://thelycaeum.in
 pygments: true
+permalink: /blog/:year/:month/:day/:title
+description: Blog posts for the Lycӕum website
+author: Noufal Ibrahim
+copyright: Copyright Noufal Ibrahim 2013. All rights reserved.
+
