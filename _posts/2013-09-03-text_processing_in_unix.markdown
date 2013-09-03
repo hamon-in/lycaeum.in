@@ -18,20 +18,20 @@ The analysis
 I use zsh version 4.3.17 on Debian. These examples are tested with that shell but they should work with bash too since I don't use too many esoteric features.
 
 First, we try to find the number of chapters in the book. This is not too hard. We simply run this.
-{% highlight shell %}
+{% highlight bash %}
 grep -iw chapter moby-dick.txt | wc -l
 {% endhighlight %}
 and we get `172`. So we know that it has (rougly) 172 chapters. The `-i` option to grep makes the search case insensitive (we match `Chapter` and `chapter`). The `-w` restricts the pattern to word boundaries. So, we won't match things like `chapters`.
 
 Next, we try to get the number of pages in the book. A typical paperback book, which is the kind I'd get if I bought a paper copy of Moby Dick, has approximately 350 words on a page (35 lines per page and 10 words per line). I know this because I actually counted them on 10 books. We can get this using
-{% highlight shell %}
+{% highlight bash %}
 expr $(wc -w moby-dick.txt | awk '{print $1}') / 350
 {% endhighlight %}
 `[expr](http://unixhelp.ed.ac.uk/CGI/man-cgi?expr)` is an under appreciated command line calculator that you can use in a pipeline. The `$(` and `)` is command substitution where the snippet inside the brackets is run and the output put instead of the `$(` and `)`. In this case, we simply count the words and get the count. We get this and divide it by 350. The output is `595`. That's around 3 pages a chapter on the average.
 
 The next thing we try to get is the length of sentences. This is useful to approximate the reading grade for the book. The [Flesch-Kincaid](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_test) tests use these (among other things) to calculate the reading level for the book. It's also fair to say that technical books usually keep the sentence lengths somewhat low (although code snippets can ruin our estimations). Childrens books have shorter sentences. The sentences we usually speak during conversation are about 20 words long. To do this, first we run the book through `tr '\n' ' '`. This changes all newlines to spaces so the whole book fits on a single line. Then we pipe that through `tr '.' '\n'` which converts it to a single sentence per line. We then count the words per such "line" using `awk '{print NF}'` and then we pipe that through `sort -n | uniq -c | sort -n` which gives us a frequency count per sentence length in increasing order. The last few lines will tell us what the lengths of most of the sentences are.
 
-{% highlight shell %}
+{% highlight bash %}
 cat moby-dick.txt | tr '\n' '  ' | tr '.' '\n'  | awk '{print NF}'  | sort -n | uniq -c | sort -n
 {% endhighlight %}
 
@@ -59,16 +59,16 @@ The last 20 lines of this gives me
         230 2
 
 The first column is the number of sentences and the second column the length of the sentence. Summing column one from this gives us `3490`.
-{% highlight shell %}
+{% highlight bash %}
 cat moby-dick.txt | tr '\n' '  ' | tr '.' '\n'  | awk '{print NF}'  | sort -n | uniq -c | sort -n | tail -20 | awk '{sum += $1} END {print sum;}'
 {% endhighlight %}
 and the total sentence count from
-{% highlight shell %}
+{% highlight bash %}
 cat moby-dick.txt | tr '\n' '  ' | tr '.' '\n'  | wc -l
 {% endhighlight %}
 is `7385`. So the last the last 20 lengths account for a little less than half the number of sentences.
 Sorting the last 20 by sentence length using
-{% highlight shell %}
+{% highlight bash %}
 cat moby-dick.txt | tr '\n' '  ' | tr '.' '\n'  | awk '{print NF}'  | sort -n | uniq -c | sort -n | tail -20 | sort -n -k2
 {% endhighlight %}
 gives us some more insight into the lengths.
@@ -97,11 +97,11 @@ gives us some more insight into the lengths.
 which is that they're all less than 27 words. That's fairly conversational. However, the maximum sentence length is 394 and it even has two sentences that are 224 words long. This makes it quite unlikely that it's a childrens or a technical book. 
 
 The next thing we can try to approximate is the year of writing this. Something like
-{% highlight shell %}
+{% highlight bash %}
 cat moby-dick.txt |  tr -Cs '[A-Za-z0-9]' '\n' | grep -w '[12][0-9][0-9][0-9]'
 {% endhighlight %}
 gives us all the years in the book. This first converts the text into one word per line (by changing all "non word" characters into newlines) and then looks for numbers that look like years. This gives us quite a list. Sticking a `wc -l` at the end gives us the number of matches (in our case 30). We can sum this and then again divide by the number of matches to get an average.
-{% highlight shell %}
+{% highlight bash %}
 expr $(cat moby-dick.txt |  tr -Cs '[A-Za-z0-9]' '\n' | grep -w '[12][0-9][0-9][0-9]' | awk '{sum += $1} END {print sum;}') / $(cat moby-dick.txt |  tr -Cs '[A-Za-z0-9]' '\n' | grep -w '[12][0-9][0-9][0-9]' | wc -l)
 {% endhighlight %}
 This is hairy but actually runs for a two hundred thousand word text file in about 0.03 seconds on my computer. That's much lesser than the time needed to write a real program to do this. I get `1796`. It's likely that it was written a little after this date (unless it's futuristic speculative fiction of some kind) so let's say early 19 century.
@@ -109,7 +109,7 @@ This is hairy but actually runs for a two hundred thousand word text file in abo
 So far, we have a non technical book for older audiences. It's approximately 600 pages spread across 170 chapters written in the early 19 century. Let's go on.
 
 We can do a frequency analysis on the number of words. First lower case everything and get one word per line using
-{% highlight shell %}
+{% highlight bash %}
 cat moby-dick.txt |  tr '[A-Z]' '[a-z]' | tr -Cs '[a-z0-9]' '\n'
 {% endhighlight %}
 
@@ -166,7 +166,7 @@ So, we can judge that this is a non technical book for older audiences. It's app
 Now you can head on to the [wikipedia page of Moby Dick](https://en.wikipedia.org/wiki/Moby_dick) and see how close we've reached.
 
 It's possible to squeeze out more information from the text. We can, for example, get bigrams from it with this (try it).
-{% highlight shell %}
+{% highlight bash %}
 paste <(cat moby-dick.txt| tr '[A-Z]' '[a-z]' | tr -sC '[a-z0-9]' '\n') <(cat moby-dick.txt| tr '[A-Z]' '[a-z]' | tr -sC '[a-z0-9]' '\n' | tail -n +2) | sort | uniq -c | sort -n | tail -20
 {% endhighlight %}
 
