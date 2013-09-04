@@ -4,7 +4,7 @@ title: "Online course on basic python"
 date: "2013-09-04 17:42:18 +0530"
 ---
 
-I'm planning to conduct an online training on basic Python sometime this month. I have a [registration form](http://bit.ly/lycaeum-python-workshop) which you should fill up if you're interested. I'm giving preference to college students from Kerala. I don't think I can handle more than 15 students so entry is limited.
+I'm planning to conduct an online training on basic Python sometime this month. The tentative date is 14 of September (Saturday). I have a [registration form](http://bit.ly/lycaeum-python-workshop) which you should fill up if you're interested. I'm giving preference to college students from Kerala. I don't think I can handle more than 15 students so entry is limited.
 
 There's also a [facebook page for the event](https://www.facebook.com/events/1413281435561662/) which you can use to let your friends know about the one day workshop.
 
