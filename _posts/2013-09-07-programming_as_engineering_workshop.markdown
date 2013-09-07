@@ -5,7 +5,7 @@ date: "2013-09-07 19:59:32 +0530"
 ---
 
 > Scientists study the world as it is; engineers create the world that has never been.
->     -- Theodore von Kármán
+>     -- Theodore von Karman
 
 I've been doing a series of workshops at colleges in Kerala titled "Programming as Engineering". The general plan is to inspire rather than instruct. To show students some new possibilities and give them some ideas to think about. This post is to talk about it and to solicit feedback.
 
