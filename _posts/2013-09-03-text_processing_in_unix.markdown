@@ -94,7 +94,15 @@ gives us some more insight into the lengths.
         163 26
         153 27
 
-which is that they're all less than 27 words. That's fairly conversational. However, the maximum sentence length is 394 and it even has two sentences that are 224 words long. This makes it quite unlikely that it's a childrens or a technical book. 
+which is that they're all less than 27 words. That's fairly conversational. However, the maximum sentence length is 394 and it even has two sentences that are 224 words long. This makes it quite unlikely that it's a childrens or a technical book. We can even go a step further and drop the `tail -20` to get a frequency distribution.
+
+{% highlight bash %}
+cat moby-dick.txt| tr '\n' ' ' | tr '.' '\n' | awk "{print NF}" | sort -n | uniq -c | sort -n| sort -n -k 2 > lengths
+{% endhighlight %}
+
+and then plot that using `gnuplot` to get something like this
+
+![Sentence lengths](/img/lengths.png)
 
 The next thing we can try to approximate is the year of writing this. Something like
 {% highlight bash %}
