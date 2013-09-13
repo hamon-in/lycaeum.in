@@ -1,0 +1,790 @@
+#+TITLE: Online Python workshop (14/Sep)
+#+AUTHOR: Noufal Ibrahim <noufal@thelycaeum.in>
+#+EMAIL: noufal@thelycaeum.in
+#+STYLE: <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+* Introduction
+  We are going to create a simple Python application to download the
+  latest image from National Geographics [[http://photography.nationalgeographic.com/photography/photo-of-the-day/][Photo of the day]] and set it
+  as your wallpaper.
+
+* Step 0 : System requirements
+  We're assuming that you're going to doing this whole thing on a
+  modern Gnu/Linux platform. It's possible to do it on Windows as well
+  but the setup instructions will be different and our time is
+  limited.
+
+* Step 1 : Install required software
+  - First thing is to make sure Python is installed. This is usually
+    the case on modern Gnu/Linux distributions. Otherwise, you can
+    install it using your package manager. On Ubuntu/Debian, the
+    package is called =python-minimal= so =sudo apt-get install
+    python-minimal= will take care of it.
+  - Second thing is to install =[[http://www.virtualenv.org/en/latest/][virtualenv]]= and =[[http://virtualenvwrapper.readthedocs.org/en/latest/][virtualenvwrapper]]=. To
+    get this on Ubuntu/Debian, you can use =sudo apt-get install
+    virtualenvwrapper=.
+  - To check this, you can try typing =python= and hitting enter. You
+    should get a message like so
+
+#+BEGIN_SRC python
+  noufal@sanitarium% python
+  python
+  Python 2.7.3 (default, Jan  2 2013, 13:56:14) 
+  [GCC 4.7.2] on linux2
+  Type "help", "copyright", "credits" or "license" for more information.
+  >>> 
+#+END_SRC
+
+  [[http://python.org][Python]] is a high level general purpose cross platform programming
+  language. It's available by default on most modern Gnu/Linux
+  distributions.
+  
+  The Python distribution comes with the interpreter itself which is
+  usually at =/usr/bin/python= and with a "standard library". This
+  gives you a lot of routines which you can use for your
+  work. e.g. functions to parse command line arguments, talk to mail
+  servers, talk to web servers, interact with the underlying
+  operating system, high performance implementations of data
+  structures like queues and heaps etc. The standard library exists
+  =/usr/lib/python-2.7= (for the 2.7 version of Python which is the
+  default on my system).
+  
+  Third party packages (i.e. libraries that do useful things which
+  are not part of the python standard library) can be installed in
+  two ways. 
+  
+  1. You can install them inside =/usr/lib/python-2.7=. This has a
+     number of problems. 
+     - Firstly, you pollute the tested, maintained
+       standard lib with a lot of non standard stuff that can break
+       things in mysterious ways.
+     - Secondly, If you're working on /n/ separate projects, you
+       can't have different libraries for each one of them. All
+       will rely on the same libraries from the system path.
+     - You can't uninstall libraries without a lot of book keeping.
+     - You can't install anything without system administrator
+       privileges.
+  2. The second way is to create a small isolated environment
+     somewhere inside your own home directory into which you can
+     install 3rd party packages and use that. This is what
+     =virtualenv= does for you. It lets you create small environments
+     which you can use for single projects. We're going to do that
+     now. =virtualenvwrapper= is a utility built on top of
+     =virtualenvwrapper= that makes it convenient for you to create,
+     manage and destroy =virtualenvs=.
+
+  We also need a program that can set the background. This depends on
+  your system but the =qiv= program that's there on Ubuntu/Debian
+  will work for most desktop environments. You can install it using
+  =sudo apt-get install qiv=.
+
+* Step 2 : Setup our environment
+  - First thing is to create a =virtualenv= for our project. You can
+    do this like so
+
+#+BEGIN_SRC shell-script
+  guest@sanitarium:~$ . /etc/bash_completion.d/virtualenvwrapper 
+  guest@sanitarium:~$ mkvirtualenv natgeo
+  New python executable in natgeo/bin/python
+  Installing distribute.............................................................................................................................................................................................done.
+  Installing pip...............done.
+  virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/predeactivate
+  virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/postdeactivate
+  virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/preactivate
+  virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/postactivate
+  virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/get_env_details
+  (natgeo)guest@sanitarium:~$ 
+#+END_SRC
+
+  The first =. /etc/bash_completion.d/virtualenvwrapper= line sources
+  the virtualenvwrapper helper functions so that you have the
+  =mkvirtualenv= command available. 
+
+  Then create a virtualenv using =mkvirtualenv=. It will create it and
+  then switch you to using it. You can see that it's activated in your
+  prompt. Look at the =natgeo= in the prompt. 
+
+  You can get out the virtualenv using =deactivate=. You can delete
+  the virtualenv if you no longer want it using =rmvirtualenv=.
+
+  - The next thing we need to do is to install some extra libraries.
+    1. [[http://docs.python-requests.org/en/latest/][Requests]] - Requests is an HTTP client library which you can use
+       to fetch pages from the net. There is a module called =urllib=
+       in the standard library but it's very hard to work
+       with. Requests is much cleaner and pretty much the way to go
+       these days. We'll be using to fetch the Picture of the Day page
+       from the National Geographic website.
+    2. [[http://www.crummy.com/software/BeautifulSoup/][Beautiful Soup]] - This is a very nice library to parse HTML
+       code. It can handle bad HTML and is powerful enough to handle
+       very complicated searches inside messy HTML documents. We're
+       installing something called =beautifulsoup4= which is the
+       latest version of the library. We'll be using this this to
+       parse the HTML which we fetch from the National Geographic
+       website.
+  - You can install these using =pip install requests= and 
+    =pip install beautifulsoup4=. Do this inside the virtualenv and
+    you'll see something like this.
+
+#+BEGIN_SRC shell-script
+(natgeo)guest@sanitarium:~/project$ pip install BeautifulSoup4
+Downloading/unpacking BeautifulSoup4
+  Downloading beautifulsoup4-4.3.1.tar.gz (142Kb): 142Kb downloaded
+  Running setup.py egg_info for package BeautifulSoup4
+    
+Installing collected packages: BeautifulSoup4
+  Running setup.py install for BeautifulSoup4
+    
+Successfully installed BeautifulSoup4
+Cleaning up...
+
+(natgeo)guest@sanitarium:~$ pip install requests
+Downloading/unpacking requests
+  Downloading requests-1.2.3.tar.gz (348Kb): 348Kb downloaded
+  Running setup.py egg_info for package requests
+    
+Installing collected packages: requests
+  Running setup.py install for requests
+    
+Successfully installed requests
+Cleaning up...
+(natgeo)guest@sanitarium:~$ 
+#+END_SRC
+ 
+  Once this is done, you should be able to check if the libraries have
+  been installed like so
+
+#+BEGIN_SRC python
+(natgeo)guest@sanitarium:~$ python
+Python 2.7.3 (default, Jan  2 2013, 13:56:14) 
+[GCC 4.7.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import requests
+>>> import BeautifulSoup
+>>> 
+#+END_SRC
+
+  They should import without any errors. Once you have this much
+  working, you're good to go. 
+
+* Step 3 : Basic program
+** Step 3.1 : Fetch the page
+   
+   Let's write a simple function to just fetch the page and return the
+   HTML. Put the following code into a program called =ng_pod.py= (for
+   National Geographic Picture of the day).
+
+#+BEGIN_SRC python
+import requests
+
+def fetch_url(url):
+    "Fetches the page with the given url and returns the body."
+    r = requests.get(url)
+    return r.content
+
+#+END_SRC 
+
+   To run this, Launch the interpreter and =import= this file. Then
+   run the =fetch_url= function. You should get something like this
+
+#+BEGIN_SRC python
+(natgeo)guest@sanitarium:~/project$ python
+Python 2.7.3 (default, Jan  2 2013, 13:56:14) 
+[GCC 4.7.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ng_pod
+>>> body = ng_pod.fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+>>> print body
+.
+.
+.
+#+END_SRC
+
+   There will be a lot of output.
+
+   This is fine but it would be nicer to directly run it from the
+   command line rather than importing and manually running from the
+   interpreter. If we do that however, we get no output. Try it
+   =python ng_pod.py=. This is because the function is not actually
+   called. We can fix that by sticking an invocation at the end like
+   so
+
+#+BEGIN_SRC python
+import requests
+
+def fetch_url(url):
+    "Fetches the page with the given url and returns the body."
+    r = requests.get(url)
+    return r.content
+
+fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+
+#+END_SRC 
+
+   Now it will work fine but we can no longer import it without the
+   fetch running which is annoying. To resolve this, the standard
+   Python idiom is to have different behaviours when the module is
+   imported and when it is run.
+
+#+BEGIN_SRC python
+import requests
+
+def fetch_url(url):
+    "Fetches the page with the given url and returns the body."
+    r = requests.get(url)
+    return r.content
+
+if __name__ == "__main__":
+    print fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+
+#+END_SRC 
+
+  Python modules when imported will have a special variable
+  automatically created called =__name__=. If the module was imported,
+  this will have the name of module in it. If it was run, it will be
+  =__main__=. We put a check for this and if imported, run the
+  function.
+
+  Now, if we run the module, it will actually do the fetching. If we
+  import it, it won't do anything and will wait for us to call the
+  function.
+  
+*** Explanations
+    The =import= keyword allows us to use external libraries in our
+    program. =import requests= makes the functions and objects defined
+    in the =requests= library available to our program. It's
+    namespaced so you'll have to call the functions using the
+    =requests= prefix (like =requests.get= instead of just =get=). 
+
+    The =def= keyword allows us to define functions. In this case, we
+    define a function called =fetch_url= that takes one url. The
+    string right below the function is called a *docstring*. It's the
+    documentation for a function and can be accessed externally using
+    =fetch_url.__doc__=. Also, the =pydoc= tool can automatically
+    generate documentation for you using these strings.
+
+    We call the =requests.get= method. This is function defined at the
+    top level of the requests module. If someone imported our =ng_pod=
+    module, they'd be able to call =ng_pod.fetch_url=. The method
+    fetches the content from the URL and then returns the payload.
+
+** Step 3.2 : Parse the document.
+   
+   If you look at the source of the document, you'll find an =img= tag
+   inside a div called  =<div>= with  =class= =primary_photo=. This is
+   what we want to get at. 
+   
+   Let's write another function to do this parsing.
+
+#+BEGIN_SRC python
+import requests
+from bs4 import BeautifulSoup
+
+def get_image_url(page):
+    """
+    Gets the image URL from the first img inside the <div
+    class='primary_photo'> tag
+    """
+
+    soup = BeautifulSoup(page)
+    div = soup.find('div', class_ = 'primary_photo')
+    img = div.find('img')['src']
+    return img
+
+
+def fetch_url(url):
+    "Fetches the page with the given url and returns the body."
+    r = requests.get(url)
+    return r.content
+
+if __name__ == "__main__":
+    page = fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+    image_url = get_image_url(page)
+    print image_url
+#+END_SRC   
+*** Explanation
+    The =from bs4 import BeautifulSoup= imports the =bs4= module
+    (which is the name of the =BeautifulSoup= library) and then makes
+    available the =BeautifulSoup= object that's defined inside it. We
+    could just as well have done =import bs4= and then said
+    =bs4.BeautifulSoup(page)= inside the =get_image= function.
+
+    The =get_image_url= function takes the output of the =fetch_url=
+    function and gets the URL of the image from it. It does this by
+    first creating a =soup= object by instantiating the
+    =BeautifulSoup= object. This looks like a function call but it's
+    actually an object being created. The resulting =soup= object has
+    methods to do various things. The =find= method can locate nodes
+    in the document based on various criteria. We first search for all
+    =div= elements with the =class= parameter equal to
+    =primary_photo=. Then find the =img= inside that and get the =src=
+    attribute of that tag which will be the URL to the image we want.
+
+    You'll also notice the """ syntax in the docstring for the
+    =get_image_url= function. This is Python's way of declaring a
+    multi line string.
+
+    We then return this URL.
+
+** Step 3.3 : Get the image.
+   We can reuse the =fetch_url= function to do this so we get
+
+#+BEGIN_SRC python
+  import requests
+  from bs4 import BeautifulSoup
+  
+  def get_image_url(page):
+      """
+      Gets the image URL from the first img inside the <div
+      class='primary_photo'> tag
+      """
+  
+      soup = BeautifulSoup(page)
+      div = soup.find('div', class_ = 'primary_photo')
+      img = div.find('img')['src']
+      return img
+  
+  def fetch_url(url):
+      "Fetches the page with the given url and returns the body."
+      r = requests.get(url)
+      return r.content
+  
+  if __name__ == "__main__":
+      page = fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+      image_url = get_image_url(page)
+      print image_url
+      image = fetch_url(image_url)
+      with open("image.jpg", "wb") as f:
+          f.write(image)
+  
+#+END_SRC
+
+*** Explanation
+    We reuse our =fetch_url= function to fetch the image. The =with=
+    which we use works by creating a *context* where some actions are
+    done. When the context is left, the actions are automatically
+    undone. In this case, the file =image.jpg= is opened in binary
+    mode and then made available as =f=. We write the data we got from
+    the website into this file. When we leave the block, the file
+    automatically gets closed. We could have done this like so
+
+#+BEGIN_SRC python
+f = open("image.jpg", "wb")
+f.write(image)
+f.close()
+#+END_SRC
+
+    You can run this program once and then take a look at the
+    image. It will be in your directory as =image.jpg=.
+
+** Step 3.4 : Set the background
+   
+   We have to "shell out" to actually set the background. The =qiv=
+   program can set backgrounds like so =qiv --root_s image_file= 
+
+   We add a new function to our program so that it now looks like this
+
+#+BEGIN_SRC python
+import subprocess
+
+import requests
+from bs4 import BeautifulSoup
+
+def get_image_url(page):
+    """
+    Gets the image URL from the first img inside the <div
+    class='primary_photo'> tag
+    """
+
+    soup = BeautifulSoup(page)
+    div = soup.find('div', class_ = 'primary_photo')
+    img = div.find('img')['src']
+    return img
+
+def fetch_url(url):
+    "Fetches the page with the given url and returns the body."
+    r = requests.get(url)
+    return r.content
+
+def set_desktop_background(image_file):
+    "Sets the desktop background to the file image_file."
+    command = "qiv --root_s %s"%image_file
+    print command
+    cmd_list = command.split()
+    subprocess.call(cmd_list)
+    
+
+if __name__ == "__main__":
+    page = fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+    image_url = get_image_url(page)
+    print image_url
+    image = fetch_url(image_url)
+    with open("image.jpg", "wb") as f:
+        f.write(image)
+    set_desktop_background("image.jpg")
+
+#+END_SRC
+*** Explanation
+    Now we have to actually set the background. For this, we can use
+    the =qiv= program. We use the =subprocess= module to call external
+    programs in Python. 
+
+    First we make a new function called =set_desktop_background=. In
+    it, we first construct a =command=. This simply creates a command
+    like =qiv --root_s image.jpg=. We use string interpolation to do
+    this. In general, we can put format specifiers inside a string
+    using =%= and then, after the string, use =%= to specify
+    values. For example
+
+#+BEGIN_SRC python
+
+name = "Noor"
+age = 30
+place = "Bangalore"
+
+print "%s aged %d from %s"%(name, age, place)
+
+#+END_SRC
+
+    would print =Noor aged 30 from Bangalore=.  Once we get the
+    command, we print it once and then call the =split= method on the
+    string. This will break it up into a list of string. Each "word"
+    will become a separate element of the list. In the following
+    example
+
+#+BEGIN_SRC python
+snippet = "Eternity in an hour"
+
+print snippet.split()
+#+END_SRC
+
+    Would give you =['Eternity', 'in', 'an', 'hour']=. We need it in
+    this fashion because =subprocess.call= expects the command that
+    way. We call it. 
+
+** Step 3.5 : Add a main function.
+   
+   The program works now but it's not good style to put so much code
+   out under the =if=. Let's move it to a function and return
+   something to the OS.
+
+   =main= is not reserved in any way (like in C) or even a
+   convention. I'm just calling it that. 
+
+#+BEGIN_SRC python
+import subprocess
+import sys
+
+import requests
+from bs4 import BeautifulSoup
+
+def get_image_url(page):
+    """
+    Gets the image URL from the first img inside the <div
+    class='primary_photo'> tag
+    """
+
+    soup = BeautifulSoup(page)
+    div = soup.find('div', class_ = 'primary_photo')
+    img = div.find('img')['src']
+    return img
+
+def fetch_url(url):
+    "Fetches the page with the given url and returns the body."
+    r = requests.get(url)
+    return r.content
+
+def set_desktop_background(image_file):
+    "Sets the desktop background to the file image_file."
+    command = "qiv --root_s %s"%image_file
+    print command
+    cmd_list = command.split()
+    subprocess.call(cmd_list)
+
+def main():
+    page = fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+    image_url = get_image_url(page)
+    print image_url
+    image = fetch_url(image_url)
+    with open("image.jpg", "wb") as f:
+        f.write(image)
+    set_desktop_background("image.jpg")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())
+
+
+#+END_SRC
+
+   
+*** Explanation
+    The =sys= module is part of the standard library (just as
+    =subprocess= is) and it contains system functions. The =exit=
+    function to quit the interpreter and return a value to the OS is
+    inside this.
+    
+    We call main and pass its return value to =sys.exit= in the =if=
+    part of the code. 
+
+    The main function itself contains everything which was originally
+    outside and we add a =return= to return something if everything is
+    okay.
+* Enhancement 1 : Add code to get previous images
+  The page has a "Previous" link. We can use that to go to the
+  previous days image and download that.
+
+  We can specify a number as an argument to the program which tells it
+  how far back we have to go. So if we say =python ng_pod.py 2= it
+  will go back two days and fetch the image from there.
+
+  The =a= tag inside the =p= tag with class =prev= has the URL we want
+  but it's relative and we need to fix that.
+
+  We should keep the URL base and combine it with that. The
+  combination is done intelligently using the =urlparse= module that's
+  in the standard library.
+
+#+BEGIN_SRC python
+
+import subprocess
+import sys
+import urlparse
+
+import requests
+from bs4 import BeautifulSoup
+
+BASE_URL = "http://photography.nationalgeographic.com/photography/photo-of-the-day/"
+
+def get_previous_day_url(page):
+    "Gets the URL for the previous day from the page"
+    
+    soup = BeautifulSoup(page)
+    p = soup.find('p', class_ = 'prev')
+    rel_prev_url = p.find('a')['href']
+    abs_prev_url = urlparse.urljoin(BASE_URL, rel_prev_url)
+    return abs_prev_url
+
+def get_image_url(page):
+    """
+    Gets the image URL from the first img inside the <div
+    class='primary_photo'> tag
+    """
+
+    soup = BeautifulSoup(page)
+    div = soup.find('div', class_ = 'primary_photo')
+    img = div.find('img')['src']
+    return img
+
+def fetch_url(url):
+    "Fetches the page with the given url and returns the body."
+    r = requests.get(url)
+    return r.content
+
+def set_desktop_background(image_file):
+    "Sets the desktop background to the file image_file."
+    command = "qiv --root_s %s"%image_file
+    print command
+    cmd_list = command.split()
+    subprocess.call(cmd_list)
+
+def main():
+    page = fetch_url(get_previous_day_url(fetch_url(BASE_URL)))
+    image_url = get_image_url(page)
+    print image_url
+    image = fetch_url(image_url)
+    with open("image.jpg", "wb") as f:
+        f.write(image)
+    set_desktop_background("image.jpg")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())
+
+#+END_SRC
+
+  All this logic is inside the =get_previous_day_url= function. It's
+  quite similar to the. =get_image_url= we wrote earlier. We also
+  change the =main= function to get the image for the previous day
+  just to test it and it works fine.
+
+  
+
+  
+
+  
+* Enhancement 2 : Add command line arguments
+  Next, we need to add a command line argument to specify how far back
+  we want to go. Something like =python ng_pod.py -d 5= will give us
+  the picture from 5 days ago.
+
+  The Python standard library gives us the =argparse= module to take
+  care of this.
+
+#+BEGIN_SRC python
+  import argparse
+  import subprocess
+  import sys
+  import urlparse
+  
+  import requests
+  from bs4 import BeautifulSoup
+  
+  BASE_URL = "http://photography.nationalgeographic.com/photography/photo-of-the-day/"
+  
+  def parse_args(args):
+      parser = argparse.ArgumentParser(description='Nat Geo picture of the day grabber.')
+      parser.add_argument('-d', '--days', type=int, default = 0, help='Get pic for these many days ago')
+      return parser.parse_args(sys.argv[1:])
+  
+  def get_day_url(days):
+      page = fetch_url(BASE_URL)
+      for i in range(days):
+          print "Day %d"%i
+          page = fetch_url(get_previous_day_url(page))
+      return page
+  
+  def get_previous_day_url(page):
+      "Gets the URL for the previous day from the page"
+      
+      soup = BeautifulSoup(page)
+      p = soup.find('p', class_ = 'prev')
+      rel_prev_url = p.find('a')['href']
+      abs_prev_url = urlparse.urljoin(BASE_URL, rel_prev_url)
+      return abs_prev_url
+  
+  def get_image_url(page):
+      """
+      Gets the image URL from the first img inside the <div
+      class='primary_photo'> tag
+      """
+  
+      soup = BeautifulSoup(page)
+      div = soup.find('div', class_ = 'primary_photo')
+      img = div.find('img')['src']
+      return img
+  
+  def fetch_url(url):
+      "Fetches the page with the given url and returns the body."
+      r = requests.get(url)
+      return r.content
+  
+  def set_desktop_background(image_file):
+      "Sets the desktop background to the file image_file."
+      command = "qiv --root_s %s"%image_file
+      print command
+      cmd_list = command.split()
+      subprocess.call(cmd_list)
+  
+  def main():
+      args = parse_args(sys.argv)
+      page = get_day_url(args.days)
+      image_url = get_image_url(page)
+      image = fetch_url(image_url)
+      with open("image.jpg", "wb") as f:
+          f.write(image)
+      set_desktop_background("image.jpg")
+      return 0
+  
+  if __name__ == "__main__":
+      sys.exit(main())
+#+END_SRC  
+
+** Explanation
+   We write the =parse_args= function to take care of the argument
+   handling. The =argparse= module in the standard library takes care
+   argument parsing. We create an =ArgumentParser= object with the
+   appropriate description and then add the =-d= option to it. After
+   that we parse the arguments.
+
+   The =argv= variable inside the =sys= module contains the command
+   line which was run to get the program. If we run 
+   =python /home/guest/project/ng_pod.py -d 18=, =sys.argv= will contain
+   =['/home/guest/project/ng_pod.py', '-d', '18']=. 
+   
+   This is a Python =list=. Lists are similar to arrays in C but they
+   can grow dynamically and have some methods that are useful. With a
+   list like =lst = ['This', 'is', 'a', 'python', 'program']=, you can
+   do the following
+
+#+BEGIN_SRC python
+>>> lst[1:4]
+['is', 'a', 'python']
+>>> lst[1:4] # Items from index 1 upto 4
+['is', 'a', 'python']
+>>> lst[1:] # Elements from the first onwards (exclude 0th)
+['is', 'a', 'python', 'program']
+>>> lst[:4] # Items upto the 4th
+['This', 'is', 'a', 'python']
+>>> lst[0:5:1] # Every second item (the last 1 is a step)
+['This', 'is', 'a', 'python', 'program']
+>>> lst[0:5:2] # Every second item (the last 1 is a step)
+['This', 'a', 'program']
+>>> lst[-1] # The first element from the end of the list
+'program'
+>>> lst[-3:-1] # Elements from the third last till the last
+['a', 'python']
+>>> 
+#+END_SRC
+
+So we give the =parse_args= method of the =parser= object all the
+arguments from our program. We skip the first element since it's the
+name of the program itself. It will return the value of =-d=. If we
+don't specify it, we'll get zero.
+
+We call this function inside =main= and then pass the =days= parameter
+to the =get_day_url= function. Here, we first fetch the latest page
+and then start a loop. 
+
+Python uses =for= for definite iteration (usually over some kind of
+iterable like a list) and =while= for indefinite iteration (e.g. loop
+till a condition is satisfied). The =range= function gives you a list
+of numbers till the argument. So,
+
+#+BEGIN_SRC python 
+>>> range(10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+>>> for i in range(10):
+...   print "%d x 5 = %d"%(i, i * 5)
+... 
+0 x 5 = 0
+1 x 5 = 5
+2 x 5 = 10
+3 x 5 = 15
+4 x 5 = 20
+5 x 5 = 25
+6 x 5 = 30
+7 x 5 = 35
+8 x 5 = 40
+9 x 5 = 45
+#+END_SRC
+
+We loop =days= times and each time get the page for the previous
+day. When we're done, we return the last fetched URL. 
+
+This then goes through the previous flow. 
+
+
+
+
+* Homework
+  Try the following
+** Homework 1 
+   Change the program to automatically change the background image
+   once in 60 minutes. 
+
+   This will require the =sleep= function in the standard library
+   =time= module and you can put the entire program inside a
+   =while True=. You'll also need to add a command line argument like
+   =-c= (for continuous) to get this behaviour.
+** Homework 2
+   Change the program to download all the images for the past =n= days
+   into the current directory named by date. If you run 
+   =python ng_pod.py --download -d 10=, you should get 10 images in
+   the current directory. 
+
+** Homework 3
+   Write a new program with similar log to parse and download all
+   links from an image gallery. Here is an example
+   http://www.glamsham.com/picture-gallery/aamir-khan-gallery/2493/1/celeb.htm
+
+

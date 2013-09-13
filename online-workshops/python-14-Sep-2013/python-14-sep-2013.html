@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Online Python workshop (14/Sep)</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-09-13 12:10:38 IST"/>
+<meta name="author" content="Noufal Ibrahim <noufal@thelycaeum.in>"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Online Python workshop (14/Sep)</h1>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction </a></li>
+<li><a href="#sec-2">2 Step 0 : System requirements </a></li>
+<li><a href="#sec-3">3 Step 1 : Install required software </a></li>
+<li><a href="#sec-4">4 Step 2 : Setup our environment </a></li>
+<li><a href="#sec-5">5 Step 3 : Basic program </a>
+<ul>
+<li><a href="#sec-5_1">5.1 Step 3.1 : Fetch the page </a>
+<ul>
+<li><a href="#sec-5_1_1">5.1.1 Explanations </a></li>
+</ul>
+</li>
+<li><a href="#sec-5_2">5.2 Step 3.2 : Parse the document. </a>
+<ul>
+<li><a href="#sec-5_2_1">5.2.1 Explanation </a></li>
+</ul>
+</li>
+<li><a href="#sec-5_3">5.3 Step 3.3 : Get the image. </a>
+<ul>
+<li><a href="#sec-5_3_1">5.3.1 Explanation </a></li>
+</ul>
+</li>
+<li><a href="#sec-5_4">5.4 Step 3.4 : Set the background </a>
+<ul>
+<li><a href="#sec-5_4_1">5.4.1 Explanation </a></li>
+</ul>
+</li>
+<li><a href="#sec-5_5">5.5 Step 3.5 : Add a main function. </a>
+<ul>
+<li><a href="#sec-5_5_1">5.5.1 Explanation </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Enhancement 1 : Add code to get previous images </a></li>
+<li><a href="#sec-7">7 Enhancement 2 : Add command line arguments </a>
+<ul>
+<li><a href="#sec-7_1">7.1 Explanation </a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 Homework </a>
+<ul>
+<li><a href="#sec-8_1">8.1 Homework 1 </a></li>
+<li><a href="#sec-8_2">8.2 Homework 2 </a></li>
+<li><a href="#sec-8_3">8.3 Homework 3 </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>  We are going to create a simple Python application to download the
+  latest image from National Geographics <a href="http://photography.nationalgeographic.com/photography/photo-of-the-day/">Photo of the day</a> and set it
+  as your wallpaper.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Step 0 : System requirements </h2>
+<div class="outline-text-2" id="text-2">
+
+<p>  We're assuming that you're going to doing this whole thing on a
+  modern Gnu/Linux platform. It's possible to do it on Windows as well
+  but the setup instructions will be different and our time is
+  limited.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Step 1 : Install required software </h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>First thing is to make sure Python is installed. This is usually
+    the case on modern Gnu/Linux distributions. Otherwise, you can
+    install it using your package manager. On Ubuntu/Debian, the
+    package is called <code>python-minimal</code> so <code>sudo apt-get install     python-minimal</code> will take care of it.
+</li>
+<li>Second thing is to install =<a href="http://www.virtualenv.org/en/latest/">virtualenv</a>= and =<a href="http://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a>=. To
+    get this on Ubuntu/Debian, you can use <code>sudo apt-get install     virtualenvwrapper</code>.
+</li>
+<li>To check this, you can try typing <code>python</code> and hitting enter. You
+    should get a message like so
+
+
+
+
+<pre class="src src-python">noufal@sanitarium% python
+python
+Python 2.7.3 (default, Jan  2 2013, 13:56:14) 
+[GCC 4.7.2] on linux2
+Type <span style="color: #ffa07a;">"help"</span>, <span style="color: #ffa07a;">"copyright"</span>, <span style="color: #ffa07a;">"credits"</span> <span style="color: #00ffff;">or</span> <span style="color: #ffa07a;">"license"</span> <span style="color: #00ffff;">for</span> more information.
+&gt;&gt;&gt; 
+</pre>
+
+
+</li>
+</ul>
+
+<p>
+  <a href="http://python.org">Python</a> is a high level general purpose cross platform programming
+  language. It's available by default on most modern Gnu/Linux
+  distributions.
+</p>
+<p>  
+  The Python distribution comes with the interpreter itself which is
+  usually at <code>/usr/bin/python</code> and with a "standard library". This
+  gives you a lot of routines which you can use for your
+  work. e.g. functions to parse command line arguments, talk to mail
+  servers, talk to web servers, interact with the underlying
+  operating system, high performance implementations of data
+  structures like queues and heaps etc. The standard library exists
+  <code>/usr/lib/python-2.7</code> (for the 2.7 version of Python which is the
+  default on my system).
+</p>
+<p>  
+  Third party packages (i.e. libraries that do useful things which
+  are not part of the python standard library) can be installed in
+  two ways. 
+</p>
+<ol>
+<li>You can install them inside <code>/usr/lib/python-2.7</code>. This has a
+     number of problems. 
+<ul>
+<li>Firstly, you pollute the tested, maintained
+       standard lib with a lot of non standard stuff that can break
+       things in mysterious ways.
+</li>
+<li>Secondly, If you're working on <i>n</i> separate projects, you
+       can't have different libraries for each one of them. All
+       will rely on the same libraries from the system path.
+</li>
+<li>You can't uninstall libraries without a lot of book keeping.
+</li>
+<li>You can't install anything without system administrator
+       privileges.
+</li>
+</ul>
+</li>
+<li>The second way is to create a small isolated environment
+     somewhere inside your own home directory into which you can
+     install 3rd party packages and use that. This is what
+     <code>virtualenv</code> does for you. It lets you create small environments
+     which you can use for single projects. We're going to do that
+     now. <code>virtualenvwrapper</code> is a utility built on top of
+     <code>virtualenvwrapper</code> that makes it convenient for you to create,
+     manage and destroy <code>virtualenvs</code>.
+</li>
+</ol>
+
+<p>
+  We also need a program that can set the background. This depends on
+  your system but the <code>qiv</code> program that's there on Ubuntu/Debian
+  will work for most desktop environments. You can install it using
+  <code>sudo apt-get install qiv</code>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Step 2 : Setup our environment </h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li>First thing is to create a <code>virtualenv</code> for our project. You can
+    do this like so
+
+
+
+
+<pre class="src src-shell-script">guest@sanitarium:~$ . /etc/bash_completion.d/virtualenvwrapper 
+guest@sanitarium:~$ mkvirtualenv natgeo
+New python executable<span style="color: #00ffff;"> in</span> natgeo/bin/python
+Installing distribute.............................................................................................................................................................................................done.
+Installing pip...............done.
+virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/predeactivate
+virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/postdeactivate
+virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/preactivate
+virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/postactivate
+virtualenvwrapper.user_scripts creating /home/guest/.virtualenvs/natgeo/bin/get_env_details
+(natgeo)guest@sanitarium:~$ 
+</pre>
+
+
+</li>
+</ul>
+
+<p>
+  The first <code>. /etc/bash_completion.d/virtualenvwrapper</code> line sources
+  the virtualenvwrapper helper functions so that you have the
+  <code>mkvirtualenv</code> command available. 
+</p>
+<p>
+  Then create a virtualenv using <code>mkvirtualenv</code>. It will create it and
+  then switch you to using it. You can see that it's activated in your
+  prompt. Look at the <code>natgeo</code> in the prompt. 
+</p>
+<p>
+  You can get out the virtualenv using <code>deactivate</code>. You can delete
+  the virtualenv if you no longer want it using <code>rmvirtualenv</code>.
+</p>
+<ul>
+<li>The next thing we need to do is to install some extra libraries.
+<ol>
+<li><a href="http://docs.python-requests.org/en/latest/">Requests</a> - Requests is an HTTP client library which you can use
+       to fetch pages from the net. There is a module called <code>urllib</code>
+       in the standard library but it's very hard to work
+       with. Requests is much cleaner and pretty much the way to go
+       these days. We'll be using to fetch the Picture of the Day page
+       from the National Geographic website.
+</li>
+<li><a href="http://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a> - This is a very nice library to parse HTML
+       code. It can handle bad HTML and is powerful enough to handle
+       very complicated searches inside messy HTML documents. We're
+       installing something called <code>beautifulsoup4</code> which is the
+       latest version of the library. We'll be using this this to
+       parse the HTML which we fetch from the National Geographic
+       website.
+</li>
+</ol>
+</li>
+<li>You can install these using <code>pip install requests</code> and 
+    <code>pip install beautifulsoup4</code>. Do this inside the virtualenv and
+    you'll see something like this.
+
+
+
+
+<pre class="src src-shell-script">(natgeo)guest@sanitarium:~/project$ pip install BeautifulSoup4
+Downloading/unpacking BeautifulSoup4
+  Downloading beautifulsoup4-4.3.1.tar.gz (142Kb): 142Kb downloaded
+  Running setup.py egg_info for package BeautifulSoup4
+    
+Installing collected packages: BeautifulSoup4
+  Running setup.py install for BeautifulSoup4
+    
+Successfully installed BeautifulSoup4
+Cleaning up...
+
+(natgeo)guest@sanitarium:~$ pip install requests
+Downloading/unpacking requests
+  Downloading requests-1.2.3.tar.gz (348Kb): 348Kb downloaded
+  Running setup.py egg_info for package requests
+    
+Installing collected packages: requests
+  Running setup.py install for requests
+    
+Successfully installed requests
+Cleaning up...
+(natgeo)guest@sanitarium:~$ 
+</pre>
+
+
+</li>
+</ul>
+
+<p> 
+  Once this is done, you should be able to check if the libraries have
+  been installed like so
+</p>
+
+
+
+<pre class="src src-python">(natgeo)guest@sanitarium:~$ python
+Python 2.7.3 (default, Jan  2 2013, 13:56:14) 
+[GCC 4.7.2] on linux2
+Type <span style="color: #ffa07a;">"help"</span>, <span style="color: #ffa07a;">"copyright"</span>, <span style="color: #ffa07a;">"credits"</span> <span style="color: #00ffff;">or</span> <span style="color: #ffa07a;">"license"</span> <span style="color: #00ffff;">for</span> more information.
+&gt;&gt;&gt; <span style="color: #00ffff;">import</span> requests
+&gt;&gt;&gt; <span style="color: #00ffff;">import</span> BeautifulSoup
+&gt;&gt;&gt; 
+</pre>
+
+
+
+<p>
+  They should import without any errors. Once you have this much
+  working, you're good to go. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Step 3 : Basic program </h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+<div id="outline-container-5_1" class="outline-3">
+<h3 id="sec-5_1"><span class="section-number-3">5.1</span> Step 3.1 : Fetch the page </h3>
+<div class="outline-text-3" id="text-5_1">
+
+
+<p>   
+   Let's write a simple function to just fetch the page and return the
+   HTML. Put the following code into a program called <code>ng_pod.py</code> (for
+   National Geographic Picture of the day).
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> requests
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+</pre>
+
+
+
+<p>
+   To run this, Launch the interpreter and <code>import</code> this file. Then
+   run the <code>fetch_url</code> function. You should get something like this
+</p>
+
+
+
+<pre class="src src-python">(natgeo)guest@sanitarium:~/project$ python
+Python 2.7.3 (default, Jan  2 2013, 13:56:14) 
+[GCC 4.7.2] on linux2
+Type <span style="color: #ffa07a;">"help"</span>, <span style="color: #ffa07a;">"copyright"</span>, <span style="color: #ffa07a;">"credits"</span> <span style="color: #00ffff;">or</span> <span style="color: #ffa07a;">"license"</span> <span style="color: #00ffff;">for</span> more information.
+&gt;&gt;&gt; <span style="color: #00ffff;">import</span> ng_pod
+&gt;&gt;&gt; <span style="color: #eedd82;">body</span> = ng_pod.fetch_url(<span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>)
+&gt;&gt;&gt; <span style="color: #00ffff;">print</span> body
+.
+.
+.
+</pre>
+
+
+
+<p>
+   There will be a lot of output.
+</p>
+<p>
+   This is fine but it would be nicer to directly run it from the
+   command line rather than importing and manually running from the
+   interpreter. If we do that however, we get no output. Try it
+   <code>python ng_pod.py</code>. This is because the function is not actually
+   called. We can fix that by sticking an invocation at the end like
+   so
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> requests
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+fetch_url(<span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>)
+
+</pre>
+
+
+
+<p>
+   Now it will work fine but we can no longer import it without the
+   fetch running which is annoying. To resolve this, the standard
+   Python idiom is to have different behaviours when the module is
+   imported and when it is run.
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> requests
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+<span style="color: #00ffff;">if</span> <span style="color: #b0c4de;">__name__</span> == <span style="color: #ffa07a;">"__main__"</span>:
+    <span style="color: #00ffff;">print</span> fetch_url(<span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>)
+
+</pre>
+
+
+
+<p>
+  Python modules when imported will have a special variable
+  automatically created called <code>__name__</code>. If the module was imported,
+  this will have the name of module in it. If it was run, it will be
+  <code>__main__</code>. We put a check for this and if imported, run the
+  function.
+</p>
+<p>
+  Now, if we run the module, it will actually do the fetching. If we
+  import it, it won't do anything and will wait for us to call the
+  function.
+</p>
+
+</div>
+
+<div id="outline-container-5_1_1" class="outline-4">
+<h4 id="sec-5_1_1"><span class="section-number-4">5.1.1</span> Explanations </h4>
+<div class="outline-text-4" id="text-5_1_1">
+
+<p>    The <code>import</code> keyword allows us to use external libraries in our
+    program. <code>import requests</code> makes the functions and objects defined
+    in the <code>requests</code> library available to our program. It's
+    namespaced so you'll have to call the functions using the
+    <code>requests</code> prefix (like <code>requests.get</code> instead of just <code>get</code>). 
+</p>
+<p>
+    The <code>def</code> keyword allows us to define functions. In this case, we
+    define a function called <code>fetch_url</code> that takes one url. The
+    string right below the function is called a <b>docstring</b>. It's the
+    documentation for a function and can be accessed externally using
+    <code>fetch_url.__doc__</code>. Also, the <code>pydoc</code> tool can automatically
+    generate documentation for you using these strings.
+</p>
+<p>
+    We call the <code>requests.get</code> method. This is function defined at the
+    top level of the requests module. If someone imported our <code>ng_pod</code>
+    module, they'd be able to call <code>ng_pod.fetch_url</code>. The method
+    fetches the content from the URL and then returns the payload.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5_2" class="outline-3">
+<h3 id="sec-5_2"><span class="section-number-3">5.2</span> Step 3.2 : Parse the document. </h3>
+<div class="outline-text-3" id="text-5_2">
+
+
+<p>   
+   If you look at the source of the document, you'll find an <code>img</code> tag
+   inside a div called  <code>&lt;div&gt;</code> with  <code>class</code> <code>primary_photo</code>. This is
+   what we want to get at. 
+</p>
+<p>   
+   Let's write another function to do this parsing.
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> requests
+<span style="color: #00ffff;">from</span> bs4 <span style="color: #00ffff;">import</span> BeautifulSoup
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_image_url</span>(page):
+    <span style="color: #ffa07a;">"""
+    Gets the image URL from the first img inside the &lt;div
+    class='primary_photo'&gt; tag
+    """</span>
+
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">div</span> = soup.find(<span style="color: #ffa07a;">'div'</span>, class_ = <span style="color: #ffa07a;">'primary_photo'</span>)
+    <span style="color: #eedd82;">img</span> = div.find(<span style="color: #ffa07a;">'img'</span>)[<span style="color: #ffa07a;">'src'</span>]
+    <span style="color: #00ffff;">return</span> img
+
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+<span style="color: #00ffff;">if</span> <span style="color: #b0c4de;">__name__</span> == <span style="color: #ffa07a;">"__main__"</span>:
+    page = fetch_url(<span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>)
+    image_url = get_image_url(page)
+    <span style="color: #00ffff;">print</span> image_url
+</pre>
+
+
+
+</div>
+
+<div id="outline-container-5_2_1" class="outline-4">
+<h4 id="sec-5_2_1"><span class="section-number-4">5.2.1</span> Explanation </h4>
+<div class="outline-text-4" id="text-5_2_1">
+
+<p>    The <code>from bs4 import BeautifulSoup</code> imports the <code>bs4</code> module
+    (which is the name of the <code>BeautifulSoup</code> library) and then makes
+    available the <code>BeautifulSoup</code> object that's defined inside it. We
+    could just as well have done <code>import bs4</code> and then said
+    <code>bs4.BeautifulSoup(page)</code> inside the <code>get_image</code> function.
+</p>
+<p>
+    The <code>get_image_url</code> function takes the output of the <code>fetch_url</code>
+    function and gets the URL of the image from it. It does this by
+    first creating a <code>soup</code> object by instantiating the
+    <code>BeautifulSoup</code> object. This looks like a function call but it's
+    actually an object being created. The resulting <code>soup</code> object has
+    methods to do various things. The <code>find</code> method can locate nodes
+    in the document based on various criteria. We first search for all
+    <code>div</code> elements with the <code>class</code> parameter equal to
+    <code>primary_photo</code>. Then find the <code>img</code> inside that and get the <code>src</code>
+    attribute of that tag which will be the URL to the image we want.
+</p>
+<p>
+    You'll also notice the """ syntax in the docstring for the
+    <code>get_image_url</code> function. This is Python's way of declaring a
+    multi line string.
+</p>
+<p>
+    We then return this URL.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5_3" class="outline-3">
+<h3 id="sec-5_3"><span class="section-number-3">5.3</span> Step 3.3 : Get the image. </h3>
+<div class="outline-text-3" id="text-5_3">
+
+<p>   We can reuse the <code>fetch_url</code> function to do this so we get
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> requests
+<span style="color: #00ffff;">from</span> bs4 <span style="color: #00ffff;">import</span> BeautifulSoup
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_image_url</span>(page):
+    <span style="color: #ffa07a;">"""
+    Gets the image URL from the first img inside the &lt;div
+    class='primary_photo'&gt; tag
+    """</span>
+
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">div</span> = soup.find(<span style="color: #ffa07a;">'div'</span>, class_ = <span style="color: #ffa07a;">'primary_photo'</span>)
+    <span style="color: #eedd82;">img</span> = div.find(<span style="color: #ffa07a;">'img'</span>)[<span style="color: #ffa07a;">'src'</span>]
+    <span style="color: #00ffff;">return</span> img
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+<span style="color: #00ffff;">if</span> <span style="color: #b0c4de;">__name__</span> == <span style="color: #ffa07a;">"__main__"</span>:
+    page = fetch_url(<span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>)
+    image_url = get_image_url(page)
+    <span style="color: #00ffff;">print</span> image_url
+    image = fetch_url(image_url)
+    <span style="color: #00ffff;">with</span> <span style="color: #b0c4de;">open</span>(<span style="color: #ffa07a;">"image.jpg"</span>, <span style="color: #ffa07a;">"wb"</span>) <span style="color: #00ffff;">as</span> f:
+        f.write(image)
+
+</pre>
+
+
+
+
+</div>
+
+<div id="outline-container-5_3_1" class="outline-4">
+<h4 id="sec-5_3_1"><span class="section-number-4">5.3.1</span> Explanation </h4>
+<div class="outline-text-4" id="text-5_3_1">
+
+<p>    We reuse our <code>fetch_url</code> function to fetch the image. The <code>with</code>
+    which we use works by creating a <b>context</b> where some actions are
+    done. When the context is left, the actions are automatically
+    undone. In this case, the file <code>image.jpg</code> is opened in binary
+    mode and then made available as <code>f</code>. We write the data we got from
+    the website into this file. When we leave the block, the file
+    automatically gets closed. We could have done this like so
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #eedd82;">f</span> = <span style="color: #b0c4de;">open</span>(<span style="color: #ffa07a;">"image.jpg"</span>, <span style="color: #ffa07a;">"wb"</span>)
+f.write(image)
+f.close()
+</pre>
+
+
+
+<p>
+    You can run this program once and then take a look at the
+    image. It will be in your directory as <code>image.jpg</code>.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5_4" class="outline-3">
+<h3 id="sec-5_4"><span class="section-number-3">5.4</span> Step 3.4 : Set the background </h3>
+<div class="outline-text-3" id="text-5_4">
+
+
+<p>   
+   We have to "shell out" to actually set the background. The <code>qiv</code>
+   program can set backgrounds like so <code>qiv --root_s image_file</code> 
+</p>
+<p>
+   We add a new function to our program so that it now looks like this
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> subprocess
+
+<span style="color: #00ffff;">import</span> requests
+<span style="color: #00ffff;">from</span> bs4 <span style="color: #00ffff;">import</span> BeautifulSoup
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_image_url</span>(page):
+    <span style="color: #ffa07a;">"""
+    Gets the image URL from the first img inside the &lt;div
+    class='primary_photo'&gt; tag
+    """</span>
+
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">div</span> = soup.find(<span style="color: #ffa07a;">'div'</span>, class_ = <span style="color: #ffa07a;">'primary_photo'</span>)
+    <span style="color: #eedd82;">img</span> = div.find(<span style="color: #ffa07a;">'img'</span>)[<span style="color: #ffa07a;">'src'</span>]
+    <span style="color: #00ffff;">return</span> img
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">set_desktop_background</span>(image_file):
+    <span style="color: #ffa07a;">"Sets the desktop background to the file image_file."</span>
+    <span style="color: #eedd82;">command</span> = <span style="color: #ffa07a;">"qiv --root_s %s"</span>%image_file
+    <span style="color: #00ffff;">print</span> command
+    <span style="color: #eedd82;">cmd_list</span> = command.split()
+    subprocess.call(cmd_list)
+    
+
+<span style="color: #00ffff;">if</span> <span style="color: #b0c4de;">__name__</span> == <span style="color: #ffa07a;">"__main__"</span>:
+    page = fetch_url(<span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>)
+    image_url = get_image_url(page)
+    <span style="color: #00ffff;">print</span> image_url
+    image = fetch_url(image_url)
+    <span style="color: #00ffff;">with</span> <span style="color: #b0c4de;">open</span>(<span style="color: #ffa07a;">"image.jpg"</span>, <span style="color: #ffa07a;">"wb"</span>) <span style="color: #00ffff;">as</span> f:
+        f.write(image)
+    set_desktop_background(<span style="color: #ffa07a;">"image.jpg"</span>)
+
+</pre>
+
+
+
+</div>
+
+<div id="outline-container-5_4_1" class="outline-4">
+<h4 id="sec-5_4_1"><span class="section-number-4">5.4.1</span> Explanation </h4>
+<div class="outline-text-4" id="text-5_4_1">
+
+<p>    Now we have to actually set the background. For this, we can use
+    the <code>qiv</code> program. We use the <code>subprocess</code> module to call external
+    programs in Python. 
+</p>
+<p>
+    First we make a new function called <code>set_desktop_background</code>. In
+    it, we first construct a <code>command</code>. This simply creates a command
+    like <code>qiv --root_s image.jpg</code>. We use string interpolation to do
+    this. In general, we can put format specifiers inside a string
+    using <code>%</code> and then, after the string, use <code>%</code> to specify
+    values. For example
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #eedd82;">name</span> = <span style="color: #ffa07a;">"Noor"</span>
+<span style="color: #eedd82;">age</span> = 30
+<span style="color: #eedd82;">place</span> = <span style="color: #ffa07a;">"Bangalore"</span>
+
+<span style="color: #00ffff;">print</span> <span style="color: #ffa07a;">"%s aged %d from %s"</span>%(name, age, place)
+
+</pre>
+
+
+
+<p>
+    would print <code>Noor aged 30 from Bangalore</code>.  Once we get the
+    command, we print it once and then call the <code>split</code> method on the
+    string. This will break it up into a list of string. Each "word"
+    will become a separate element of the list. In the following
+    example
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #eedd82;">snippet</span> = <span style="color: #ffa07a;">"Eternity in an hour"</span>
+
+<span style="color: #00ffff;">print</span> snippet.split()
+</pre>
+
+
+
+<p>
+    Would give you <code>['Eternity', 'in', 'an', 'hour']</code>. We need it in
+    this fashion because <code>subprocess.call</code> expects the command that
+    way. We call it. 
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5_5" class="outline-3">
+<h3 id="sec-5_5"><span class="section-number-3">5.5</span> Step 3.5 : Add a main function. </h3>
+<div class="outline-text-3" id="text-5_5">
+
+
+<p>   
+   The program works now but it's not good style to put so much code
+   out under the <code>if</code>. Let's move it to a function and return
+   something to the OS.
+</p>
+<p>
+   <code>main</code> is not reserved in any way (like in C) or even a
+   convention. I'm just calling it that. 
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> subprocess
+<span style="color: #00ffff;">import</span> sys
+
+<span style="color: #00ffff;">import</span> requests
+<span style="color: #00ffff;">from</span> bs4 <span style="color: #00ffff;">import</span> BeautifulSoup
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_image_url</span>(page):
+    <span style="color: #ffa07a;">"""
+    Gets the image URL from the first img inside the &lt;div
+    class='primary_photo'&gt; tag
+    """</span>
+
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">div</span> = soup.find(<span style="color: #ffa07a;">'div'</span>, class_ = <span style="color: #ffa07a;">'primary_photo'</span>)
+    <span style="color: #eedd82;">img</span> = div.find(<span style="color: #ffa07a;">'img'</span>)[<span style="color: #ffa07a;">'src'</span>]
+    <span style="color: #00ffff;">return</span> img
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">set_desktop_background</span>(image_file):
+    <span style="color: #ffa07a;">"Sets the desktop background to the file image_file."</span>
+    <span style="color: #eedd82;">command</span> = <span style="color: #ffa07a;">"qiv --root_s %s"</span>%image_file
+    <span style="color: #00ffff;">print</span> command
+    <span style="color: #eedd82;">cmd_list</span> = command.split()
+    subprocess.call(cmd_list)
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">main</span>():
+    <span style="color: #eedd82;">page</span> = fetch_url(<span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>)
+    <span style="color: #eedd82;">image_url</span> = get_image_url(page)
+    <span style="color: #00ffff;">print</span> image_url
+    <span style="color: #eedd82;">image</span> = fetch_url(image_url)
+    <span style="color: #00ffff;">with</span> <span style="color: #b0c4de;">open</span>(<span style="color: #ffa07a;">"image.jpg"</span>, <span style="color: #ffa07a;">"wb"</span>) <span style="color: #00ffff;">as</span> f:
+        f.write(image)
+    set_desktop_background(<span style="color: #ffa07a;">"image.jpg"</span>)
+    <span style="color: #00ffff;">return</span> 0
+
+<span style="color: #00ffff;">if</span> <span style="color: #b0c4de;">__name__</span> == <span style="color: #ffa07a;">"__main__"</span>:
+    sys.<span style="color: #7fffd4;">exit</span>(main())
+
+
+</pre>
+
+
+
+
+
+</div>
+
+<div id="outline-container-5_5_1" class="outline-4">
+<h4 id="sec-5_5_1"><span class="section-number-4">5.5.1</span> Explanation </h4>
+<div class="outline-text-4" id="text-5_5_1">
+
+<p>    The <code>sys</code> module is part of the standard library (just as
+    <code>subprocess</code> is) and it contains system functions. The <code>exit</code>
+    function to quit the interpreter and return a value to the OS is
+    inside this.
+</p>
+<p>    
+    We call main and pass its return value to <code>sys.exit</code> in the <code>if</code>
+    part of the code. 
+</p>
+<p>
+    The main function itself contains everything which was originally
+    outside and we add a <code>return</code> to return something if everything is
+    okay.
+</p></div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Enhancement 1 : Add code to get previous images </h2>
+<div class="outline-text-2" id="text-6">
+
+<p>  The page has a "Previous" link. We can use that to go to the
+  previous days image and download that.
+</p>
+<p>
+  We can specify a number as an argument to the program which tells it
+  how far back we have to go. So if we say <code>python ng_pod.py 2</code> it
+  will go back two days and fetch the image from there.
+</p>
+<p>
+  The <code>a</code> tag inside the <code>p</code> tag with class <code>prev</code> has the URL we want
+  but it's relative and we need to fix that.
+</p>
+<p>
+  We should keep the URL base and combine it with that. The
+  combination is done intelligently using the <code>urlparse</code> module that's
+  in the standard library.
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> subprocess
+<span style="color: #00ffff;">import</span> sys
+<span style="color: #00ffff;">import</span> urlparse
+
+<span style="color: #00ffff;">import</span> requests
+<span style="color: #00ffff;">from</span> bs4 <span style="color: #00ffff;">import</span> BeautifulSoup
+
+<span style="color: #eedd82;">BASE_URL</span> = <span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_previous_day_url</span>(page):
+    <span style="color: #ffa07a;">"Gets the URL for the previous day from the page"</span>
+    
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">p</span> = soup.find(<span style="color: #ffa07a;">'p'</span>, class_ = <span style="color: #ffa07a;">'prev'</span>)
+    <span style="color: #eedd82;">rel_prev_url</span> = p.find(<span style="color: #ffa07a;">'a'</span>)[<span style="color: #ffa07a;">'href'</span>]
+    <span style="color: #eedd82;">abs_prev_url</span> = urlparse.urljoin(BASE_URL, rel_prev_url)
+    <span style="color: #00ffff;">return</span> abs_prev_url
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_image_url</span>(page):
+    <span style="color: #ffa07a;">"""
+    Gets the image URL from the first img inside the &lt;div
+    class='primary_photo'&gt; tag
+    """</span>
+
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">div</span> = soup.find(<span style="color: #ffa07a;">'div'</span>, class_ = <span style="color: #ffa07a;">'primary_photo'</span>)
+    <span style="color: #eedd82;">img</span> = div.find(<span style="color: #ffa07a;">'img'</span>)[<span style="color: #ffa07a;">'src'</span>]
+    <span style="color: #00ffff;">return</span> img
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">set_desktop_background</span>(image_file):
+    <span style="color: #ffa07a;">"Sets the desktop background to the file image_file."</span>
+    <span style="color: #eedd82;">command</span> = <span style="color: #ffa07a;">"qiv --root_s %s"</span>%image_file
+    <span style="color: #00ffff;">print</span> command
+    <span style="color: #eedd82;">cmd_list</span> = command.split()
+    subprocess.call(cmd_list)
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">main</span>():
+    <span style="color: #eedd82;">page</span> = fetch_url(get_previous_day_url(fetch_url(BASE_URL)))
+    <span style="color: #eedd82;">image_url</span> = get_image_url(page)
+    <span style="color: #00ffff;">print</span> image_url
+    <span style="color: #eedd82;">image</span> = fetch_url(image_url)
+    <span style="color: #00ffff;">with</span> <span style="color: #b0c4de;">open</span>(<span style="color: #ffa07a;">"image.jpg"</span>, <span style="color: #ffa07a;">"wb"</span>) <span style="color: #00ffff;">as</span> f:
+        f.write(image)
+    set_desktop_background(<span style="color: #ffa07a;">"image.jpg"</span>)
+    <span style="color: #00ffff;">return</span> 0
+
+<span style="color: #00ffff;">if</span> <span style="color: #b0c4de;">__name__</span> == <span style="color: #ffa07a;">"__main__"</span>:
+    sys.<span style="color: #7fffd4;">exit</span>(main())
+
+</pre>
+
+
+
+<p>
+  All this logic is inside the <code>get_previous_day_url</code> function. It's
+  quite similar to the. <code>get_image_url</code> we wrote earlier. We also
+  change the <code>main</code> function to get the image for the previous day
+  just to test it and it works fine.
+</p>
+
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Enhancement 2 : Add command line arguments </h2>
+<div class="outline-text-2" id="text-7">
+
+<p>  Next, we need to add a command line argument to specify how far back
+  we want to go. Something like <code>python ng_pod.py -d 5</code> will give us
+  the picture from 5 days ago.
+</p>
+<p>
+  The Python standard library gives us the <code>argparse</code> module to take
+  care of this.
+</p>
+
+
+
+<pre class="src src-python"><span style="color: #00ffff;">import</span> argparse
+<span style="color: #00ffff;">import</span> subprocess
+<span style="color: #00ffff;">import</span> sys
+<span style="color: #00ffff;">import</span> urlparse
+
+<span style="color: #00ffff;">import</span> requests
+<span style="color: #00ffff;">from</span> bs4 <span style="color: #00ffff;">import</span> BeautifulSoup
+
+<span style="color: #eedd82;">BASE_URL</span> = <span style="color: #ffa07a;">"http://photography.nationalgeographic.com/photography/photo-of-the-day/"</span>
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">parse_args</span>(args):
+    <span style="color: #eedd82;">parser</span> = argparse.ArgumentParser(description=<span style="color: #ffa07a;">'Nat Geo picture of the day grabber.'</span>)
+    parser.add_argument(<span style="color: #ffa07a;">'-d'</span>, <span style="color: #ffa07a;">'--days'</span>, <span style="color: #b0c4de;">type</span>=<span style="color: #b0c4de;">int</span>, default = 0, <span style="color: #b0c4de;">help</span>=<span style="color: #ffa07a;">'Get pic for these many days ago'</span>)
+    <span style="color: #00ffff;">return</span> parser.parse_args(sys.argv[1:])
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_day_url</span>(days):
+    <span style="color: #eedd82;">page</span> = fetch_url(BASE_URL)
+    <span style="color: #00ffff;">for</span> i <span style="color: #00ffff;">in</span> <span style="color: #b0c4de;">range</span>(days):
+        <span style="color: #00ffff;">print</span> <span style="color: #ffa07a;">"Day %d"</span>%i
+        <span style="color: #eedd82;">page</span> = fetch_url(get_previous_day_url(page))
+    <span style="color: #00ffff;">return</span> page
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_previous_day_url</span>(page):
+    <span style="color: #ffa07a;">"Gets the URL for the previous day from the page"</span>
+    
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">p</span> = soup.find(<span style="color: #ffa07a;">'p'</span>, class_ = <span style="color: #ffa07a;">'prev'</span>)
+    <span style="color: #eedd82;">rel_prev_url</span> = p.find(<span style="color: #ffa07a;">'a'</span>)[<span style="color: #ffa07a;">'href'</span>]
+    <span style="color: #eedd82;">abs_prev_url</span> = urlparse.urljoin(BASE_URL, rel_prev_url)
+    <span style="color: #00ffff;">return</span> abs_prev_url
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">get_image_url</span>(page):
+    <span style="color: #ffa07a;">"""
+    Gets the image URL from the first img inside the &lt;div
+    class='primary_photo'&gt; tag
+    """</span>
+
+    <span style="color: #eedd82;">soup</span> = BeautifulSoup(page)
+    <span style="color: #eedd82;">div</span> = soup.find(<span style="color: #ffa07a;">'div'</span>, class_ = <span style="color: #ffa07a;">'primary_photo'</span>)
+    <span style="color: #eedd82;">img</span> = div.find(<span style="color: #ffa07a;">'img'</span>)[<span style="color: #ffa07a;">'src'</span>]
+    <span style="color: #00ffff;">return</span> img
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">fetch_url</span>(url):
+    <span style="color: #ffa07a;">"Fetches the page with the given url and returns the body."</span>
+    <span style="color: #eedd82;">r</span> = requests.get(url)
+    <span style="color: #00ffff;">return</span> r.content
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">set_desktop_background</span>(image_file):
+    <span style="color: #ffa07a;">"Sets the desktop background to the file image_file."</span>
+    <span style="color: #eedd82;">command</span> = <span style="color: #ffa07a;">"qiv --root_s %s"</span>%image_file
+    <span style="color: #00ffff;">print</span> command
+    <span style="color: #eedd82;">cmd_list</span> = command.split()
+    subprocess.call(cmd_list)
+
+<span style="color: #00ffff;">def</span> <span style="color: #87cefa;">main</span>():
+    <span style="color: #eedd82;">args</span> = parse_args(sys.argv)
+    <span style="color: #eedd82;">page</span> = get_day_url(args.days)
+    <span style="color: #eedd82;">image_url</span> = get_image_url(page)
+    <span style="color: #eedd82;">image</span> = fetch_url(image_url)
+    <span style="color: #00ffff;">with</span> <span style="color: #b0c4de;">open</span>(<span style="color: #ffa07a;">"image.jpg"</span>, <span style="color: #ffa07a;">"wb"</span>) <span style="color: #00ffff;">as</span> f:
+        f.write(image)
+    set_desktop_background(<span style="color: #ffa07a;">"image.jpg"</span>)
+    <span style="color: #00ffff;">return</span> 0
+
+<span style="color: #00ffff;">if</span> <span style="color: #b0c4de;">__name__</span> == <span style="color: #ffa07a;">"__main__"</span>:
+    sys.<span style="color: #7fffd4;">exit</span>(main())
+</pre>
+
+
+
+
+</div>
+
+<div id="outline-container-7_1" class="outline-3">
+<h3 id="sec-7_1"><span class="section-number-3">7.1</span> Explanation </h3>
+<div class="outline-text-3" id="text-7_1">
+
+<p>   We write the <code>parse_args</code> function to take care of the argument
+   handling. The <code>argparse</code> module in the standard library takes care
+   argument parsing. We create an <code>ArgumentParser</code> object with the
+   appropriate description and then add the <code>-d</code> option to it. After
+   that we parse the arguments.
+</p>
+<p>
+   The <code>argv</code> variable inside the <code>sys</code> module contains the command
+   line which was run to get the program. If we run 
+   <code>python /home/guest/project/ng_pod.py -d 18</code>, <code>sys.argv</code> will contain
+   <code>['/home/guest/project/ng_pod.py', '-d', '18']</code>. 
+</p>
+<p>   
+   This is a Python <code>list</code>. Lists are similar to arrays in C but they
+   can grow dynamically and have some methods that are useful. With a
+   list like <code>lst = ['This', 'is', 'a', 'python', 'program']</code>, you can
+   do the following
+</p>
+
+
+
+<pre class="src src-python">&gt;&gt;&gt; lst[1:4]
+[<span style="color: #ffa07a;">'is'</span>, <span style="color: #ffa07a;">'a'</span>, <span style="color: #ffa07a;">'python'</span>]
+&gt;&gt;&gt; lst[1:4] <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Items from index 1 upto 4
+</span>[<span style="color: #ffa07a;">'is'</span>, <span style="color: #ffa07a;">'a'</span>, <span style="color: #ffa07a;">'python'</span>]
+&gt;&gt;&gt; lst[1:] <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Elements from the first onwards (exclude 0th)
+</span>[<span style="color: #ffa07a;">'is'</span>, <span style="color: #ffa07a;">'a'</span>, <span style="color: #ffa07a;">'python'</span>, <span style="color: #ffa07a;">'program'</span>]
+&gt;&gt;&gt; lst[:4] <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Items upto the 4th
+</span>[<span style="color: #ffa07a;">'This'</span>, <span style="color: #ffa07a;">'is'</span>, <span style="color: #ffa07a;">'a'</span>, <span style="color: #ffa07a;">'python'</span>]
+&gt;&gt;&gt; lst[0:5:1] <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Every second item (the last 1 is a step)
+</span>[<span style="color: #ffa07a;">'This'</span>, <span style="color: #ffa07a;">'is'</span>, <span style="color: #ffa07a;">'a'</span>, <span style="color: #ffa07a;">'python'</span>, <span style="color: #ffa07a;">'program'</span>]
+&gt;&gt;&gt; lst[0:5:2] <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Every second item (the last 1 is a step)
+</span>[<span style="color: #ffa07a;">'This'</span>, <span style="color: #ffa07a;">'a'</span>, <span style="color: #ffa07a;">'program'</span>]
+&gt;&gt;&gt; lst[-1] <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">The first element from the end of the list
+</span><span style="color: #ffa07a;">'program'</span>
+&gt;&gt;&gt; lst[-3:-1] <span style="color: #ff7f24;"># </span><span style="color: #ff7f24;">Elements from the third last till the last
+</span>[<span style="color: #ffa07a;">'a'</span>, <span style="color: #ffa07a;">'python'</span>]
+&gt;&gt;&gt; 
+</pre>
+
+
+
+<p>
+So we give the <code>parse_args</code> method of the <code>parser</code> object all the
+arguments from our program. We skip the first element since it's the
+name of the program itself. It will return the value of <code>-d</code>. If we
+don't specify it, we'll get zero.
+</p>
+<p>
+We call this function inside <code>main</code> and then pass the <code>days</code> parameter
+to the <code>get_day_url</code> function. Here, we first fetch the latest page
+and then start a loop. 
+</p>
+<p>
+Python uses <code>for</code> for definite iteration (usually over some kind of
+iterable like a list) and <code>while</code> for indefinite iteration (e.g. loop
+till a condition is satisfied). The <code>range</code> function gives you a list
+of numbers till the argument. So,
+</p>
+
+
+
+<pre class="src src-python">&gt;&gt;&gt; <span style="color: #b0c4de;">range</span>(10)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+&gt;&gt;&gt; <span style="color: #00ffff;">for</span> i <span style="color: #00ffff;">in</span> <span style="color: #b0c4de;">range</span>(10):
+...   <span style="color: #00ffff;">print</span> <span style="color: #ffa07a;">"%d x 5 = %d"</span>%(i, i * 5)
+... 
+0 x <span style="color: #eedd82;">5</span> = 0
+1 x <span style="color: #eedd82;">5</span> = 5
+2 x <span style="color: #eedd82;">5</span> = 10
+3 x <span style="color: #eedd82;">5</span> = 15
+4 x <span style="color: #eedd82;">5</span> = 20
+5 x <span style="color: #eedd82;">5</span> = 25
+6 x <span style="color: #eedd82;">5</span> = 30
+7 x <span style="color: #eedd82;">5</span> = 35
+8 x <span style="color: #eedd82;">5</span> = 40
+9 x <span style="color: #eedd82;">5</span> = 45
+</pre>
+
+
+
+<p>
+We loop <code>days</code> times and each time get the page for the previous
+day. When we're done, we return the last fetched URL. 
+</p>
+<p>
+This then goes through the previous flow. 
+</p>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Homework </h2>
+<div class="outline-text-2" id="text-8">
+
+<p>  Try the following
+</p>
+</div>
+
+<div id="outline-container-8_1" class="outline-3">
+<h3 id="sec-8_1"><span class="section-number-3">8.1</span> Homework 1 </h3>
+<div class="outline-text-3" id="text-8_1">
+
+<p>   Change the program to automatically change the background image
+   once in 60 minutes. 
+</p>
+<p>
+   This will require the <code>sleep</code> function in the standard library
+   <code>time</code> module and you can put the entire program inside a
+   <code>while True</code>. You'll also need to add a command line argument like
+   <code>-c</code> (for continuous) to get this behaviour.
+</p></div>
+
+</div>
+
+<div id="outline-container-8_2" class="outline-3">
+<h3 id="sec-8_2"><span class="section-number-3">8.2</span> Homework 2 </h3>
+<div class="outline-text-3" id="text-8_2">
+
+<p>   Change the program to download all the images for the past <code>n</code> days
+   into the current directory named by date. If you run 
+   <code>python ng_pod.py --download -d 10</code>, you should get 10 images in
+   the current directory. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8_3" class="outline-3">
+<h3 id="sec-8_3"><span class="section-number-3">8.3</span> Homework 3 </h3>
+<div class="outline-text-3" id="text-8_3">
+
+<p>   Write a new program with similar log to parse and download all
+   links from an image gallery. Here is an example
+   <a href="http://www.glamsham.com/picture-gallery/aamir-khan-gallery/2493/1/celeb.htm">http://www.glamsham.com/picture-gallery/aamir-khan-gallery/2493/1/celeb.htm</a>
+</p>
+
+</div>
+</div>
+</div>
+<div id="postamble">
+<p class="author">Author: Noufal Ibrahim <noufal@thelycaeum.in></p>
+<p class="creator">Org version 7.5 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+</div>
+</div>
+</body>
+</html>
