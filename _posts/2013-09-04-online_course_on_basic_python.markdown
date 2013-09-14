@@ -11,3 +11,8 @@ There's also a [facebook page for the event](https://www.facebook.com/events/141
 We will do a basic course and then, if there's sufficient interest, conduct more in the future. My intention is to gauge interest and to check whether the tools available are sufficient to conduct something like this.
 
 Please spread the word.
+
+*Update:*
+
+This course was concluded on 14 Sep 2013. The notes and IRC transcript are available at
+[http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html](http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html).
