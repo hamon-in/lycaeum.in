@@ -1,4 +1,4 @@
-#+TITLE: Online Python workshop (14/Sep)
+#+TITLE: Online Python workshop
 #+AUTHOR: Noufal Ibrahim <noufal@thelycaeum.in>
 #+EMAIL: noufal@thelycaeum.in
 #+STYLE: <link rel="stylesheet" type="text/css" href="stylesheet.css" />
