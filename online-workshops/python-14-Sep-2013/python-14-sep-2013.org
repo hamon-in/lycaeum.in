@@ -788,5 +788,9 @@ This then goes through the previous flow.
    http://www.glamsham.com/picture-gallery/aamir-khan-gallery/2493/1/celeb.htm
 
 
-* Class transcript
-  This workshop was concluded on 14/Sep/2013 at 1854 IST. The IRC transcript is available [[./python-14-sep-2013-transcript.html][here]].
+* Class transcripts
+  This workshop was conducted on the following dates. The links go through to the IRC transcripts
+  - [[./python-14-sep-2013-transcript.html][14/Sep/2013]]
+  - [[./python-21-sep-2013-transcript.txt][21/Sep/2103]]
+
+

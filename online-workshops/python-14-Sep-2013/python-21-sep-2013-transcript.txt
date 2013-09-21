@@ -1,0 +1,724 @@
+
+
+
+[Sat Sep 21 2013]
+*** You have joined channel #thelycaeum  [14:47]
+*** Users on #thelycaeum: Khmar riaz Kazmik
+*** #thelycaeum modes: +cnt
+*** #thelycaeum was created on 2013-09-12 18:28:06
+ERC> /whois riaz   [14:48]
+*** riaz is 117.201.246.255 - http://webchat.freenode.net
+    (75c9f6ff@gateway/web/freenode/ip.117.201.246.255)
+*** riaz is on channel(s): #thelycaeum 
+*** riaz is/was on server herbert.freenode.net (DE)
+ERC> /whois Kazmik
+*** Kazmik is ... (~Kazmik@117.201.249.131)
+*** Kazmik is on channel(s): #thelycaeum 
+*** Kazmik is/was on server cameron.freenode.net (Vilnius, Lithuania, EU)
+<Kazmik> helo
+<Khmar> Hi
+ERC> /msg chanserv help
+<Kazmik> am i in the right gropu?
+<Khmar> The online Python trainig?
+<Kazmik> online python workshop?
+<Khmar> Yes.
+<Kazmik> thk god.been tryin to fig out this rc client for hours
+<Kazmik> :)
+*** ChanServ (ChanServ@services.) has changed mode for #thelycaeum to +o Khmar
+								        [14:49]
+*** nase (~nase@117.201.244.123) has joined channel #thelycaeum
+<Khmar> We'll wait till 1510 or so before starting.
+<Kazmik> oki
+<Khmar> Your name?
+<Kazmik> mohammed akzin  [14:50]
+ERC> /msg Chanserv info #thelycaeum
+<Khmar> From?
+<Kazmik> calicut
+<Kazmik> studying at nss palakkad
+<riaz> hi
+<Kazmik> we can do this in windows right?
+<nase> I'm Naseeha From Calicut, studying at NSSCE Palakkad  [14:51]
+<Kazmik> i installed python here
+<Kazmik> i mean in windows
+<riaz> i'm on ubuntu
+<Kazmik> will that be enough?
+<Khmar> I'm not sure. I haven't tested the course on Windows.
+<Kazmik> currently dont have linux in ma lap
+<Khmar> Make sure that you have atleast this much running
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-4
+								        [14:52]
+<Kazmik> ohh
+<Khmar> nase: Were you the one who sent the email to the group?
+<Kazmik> about that..  [14:53]
+<Kazmik> i dont understand how to setup enviorment
+<nase> yeah.  [14:54]
+<Kazmik> it shows some error when i type in that command
+	 . /etc/bash_completion.d/virtualenvwrapper
+<Khmar> Well, is Python running?
+<Kazmik> ya
+<Khmar> Kazmik: That won't work on Windows.
+<Kazmik> so ? what should i do?
+<Khmar> That's a UNIX shell script. Virtualenvwrapper will not work on
+	windows.
+<Kazmik> i mean thats needed for this course?
+<Khmar> Kazmik: Look through https://pypi.python.org/pypi/virtualenv and
+	install Virtualenv.  [14:55]
+<Khmar> Make sure that works first.
+<Khmar> There's also some useful help at
+	https://zignar.net/2012/06/17/install-python-on-windows/
+<Khmar> Please look through those and get it working. 
+<Kazmik> oki  [14:56]
+<riaz> w8 w8... is this workshop is on windows??
+<Khmar> riaz: Nope. It's on Linux. Kazmik has Windows.
+<riaz> ooh ok
+<riaz> i created virtual environment  in the name natgeo  [14:57]
+<Khmar> Cool.
+<nase> I'm on linux mint.  [14:58]
+<Khmar> nase: Should be fine. Were you able to do the setup?
+<nase> yeah
+<Khmar> Kazmik: It's a pain to do any serious development on Windows so I
+	think it's best you either shift to Linux or atleast install it inside
+	a VM like Virtualbox or vmware. 
+<Khmar> Kazmik: How's it going?   [15:01]
+ERC> /who #thelycaeum
+*** #thelycaeum nase       H    ~nase@117.201.244.123 (Nase)
+*** #thelycaeum Khmar      H@   ~user@123.238.85.208 (Noufal Ibrahim
+    (nibrahim.net.in))
+*** #thelycaeum riaz       H
+    75c9f6ff@gateway/web/freenode/ip.117.201.246.255 (117.201.246.255 -
+    http://webchat.freenode.net)
+*** #thelycaeum Kazmik     H    ~Kazmik@117.201.249.131 (...)
+<Kazmik> not good
+<Kazmik> i mean not very much good in linux
+<Kazmik> never tried using it extensively before
+<Kazmik> just for smple programing in java and all  [15:02]
+<Kazmik> k i downloaded virtualenv from it
+<Khmar> Install it.
+<Kazmik> got some file called setup.py
+<Kazmik> ok
+<nase> for me there shows import error for the import requests command  [15:03]
+<Kazmik> just opening it??or any other way?
+<Khmar> Kazmik: Run it using Python.
+<Kazmik> ok
+<Khmar> C:\Location\Of\Python.exe setup.py
+<Khmar> Follow the instructions on the website. It'll be clearer there.
+<Kazmik> ok
+<Kazmik> in site it shows pip.exe install virualenv  [15:04]
+<Kazmik> whats that?
+ERC> /topic Weekly Basic Python course here every Saturday http://thelycaeum.in/blog/2013/09/18/online_basic_python_course/. Please use http://pastebin.com/ for large amounts of text (don't paste in the channel).
+								        [15:05]
+*** Khmar (~user@123.238.85.208) has set the topic for #thelycaeum: "Weekly
+    Basic Python course here every Saturday
+    http://thelycaeum.in/blog/2013/09/18/online_basic_python_course/. Please
+    use http://pastebin.com/ for large amounts of text (don't paste in the
+    channel)."
+<Khmar> Use the instructions here https://pypi.python.org/pypi/virtualenv
+<Khmar> First download and unzip virtualenv  [15:06]
+<Khmar> Then use Python to run the setup.py file like I've mentioned above. 
+<Kazmik> done
+<Kazmik> where sould i store the uniped file?  [15:07]
+<Khmar> Now tell me where your Python interpreter is installed (full path).
+<Khmar> Doesn't matter. Once it's installed, it's done.
+<Kazmik> in python folder?
+<Kazmik> its in c:\python27
+<Kazmik> should i unzip virtualenv to that folder
+<Khmar> Full path to the interpreter.
+<Khmar> Kazmik: It doesn't matter where you unzip the virtualenv. Put it
+	somewhere and run the setup.py with python like I've mentioned above.
+								        [15:08]
+ERC> /who #thelycaeum
+*** #thelycaeum nase       H    ~nase@117.201.244.123 (Nase)
+*** #thelycaeum Khmar      H@   ~user@123.238.85.208 (Noufal Ibrahim
+    (nibrahim.net.in))
+*** #thelycaeum riaz       H
+    75c9f6ff@gateway/web/freenode/ip.117.201.246.255 (117.201.246.255 -
+    http://webchat.freenode.net)
+*** #thelycaeum Kazmik     H    ~Kazmik@117.201.249.131 (...)
+<Kazmik> it shows error  [15:09]
+<Kazmik> syntax error
+<Khmar> Since we are doing this using text, please use pastebin.com and paste
+	the entire error. I can't help you if you say "it shows syntax error"
+<Khmar> What error do you see?  [15:10]
+<Kazmik> file "<stdin>",line 1  [15:11]
+<Kazmik> c:\path\python.exe setup.py
+<Kazmik> an arrow to : after c
+<Khmar> Please cut/paste the entire error into pastebin.com and give me the
+	URL.  [15:12]
+<Kazmik> cut paste?
+<Kazmik> from cmd?
+<Khmar> Go to pastebin.com  [15:13]
+<Kazmik> ok
+<Khmar> Cut/paste the entire error message into that site.
+<Khmar> Click "submit"
+<Khmar> you'll get a URL 
+<Khmar> Tell me the URL
+<Khmar> Then I can see your error. 
+<Kazmik> how to cut from command prompt?
+<Kazmik> its not showing any selection
+<Khmar> I think it's best you get Linux installed and come back next week for
+	the training. We can't spend any more time on this.
+<Kazmik> ya  [15:14]
+<Kazmik> i knew it was a long shot
+<Kazmik> its k
+<Khmar> You're welcome to hang around though if you want.
+<Khmar> And compare what I'm saying with the notes.
+<Khmar> Let's start.
+<Kazmik> could u tell me what u going to teach today?
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html
+<Kazmik> ok
+<Khmar> Those are the notes and what we're going to work through. riaz and
+	nase. You guys here?  [15:15]
+<nase> yeah.but there shows an error for me for import requests command
+<Khmar> What's the problem?  [15:16]
+<Khmar> Tell me what you did first.
+<nase> ImportError: No module named requests
+<Khmar> Okay. Did you first run mkvirtualenv?  [15:17]
+<nase> I did as instructed in the url
+       http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html
+<nase> yeah
+<Khmar> Okay.
+<nase> mkvirtualenv natgeo  [15:18]
+<Khmar> Okay.
+<Khmar> Did your prompt change after that? Does it have (natgeo) in front?
+<nase> yeah
+<Khmar> Did you run "pip install requests"
+<Khmar> ?
+*** riaz (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has quit: Ping
+    timeout: 250 seconds  [15:19]
+<nase> yeah.
+<nase> but it shows syntax error
+<nase> SyntaxError: invalid syntax  [15:20]
+<Khmar> Can you run "python --version" and give me the output?
+*** anzen (0e632bf6@gateway/web/freenode/ip.14.99.43.246) has joined channel
+    #thelycaeum
+<nase> Python 2.7.3
+<Khmar> Okay.  [15:21]
+<Khmar> Can you cut/paste the entire output you get when you run the pip
+	install command into pastebin.com and then show it to me?
+<nase> ok
+<anzen> Hi, I hope i'm not too late!  [15:22]
+ERC> /whois anzen 
+*** anzen is 14.99.43.246 - http://webchat.freenode.net
+    (0e632bf6@gateway/web/freenode/ip.14.99.43.246)
+*** anzen is on channel(s): #thelycaeum 
+*** anzen is/was on server herbert.freenode.net (DE)
+<Khmar> anzen: Nope. I presume your system is setup?
+<nase> http://pastebin.com/KGJkttNT  [15:23]
+<anzen> I'm working on it!
+<Khmar> nase: You need to run that in the shell. Not inside Python.
+<nase> okay
+<Khmar> Did it work?  [15:24]
+ERC> /whois anzen   [15:25]
+*** anzen is 14.99.43.246 - http://webchat.freenode.net
+    (0e632bf6@gateway/web/freenode/ip.14.99.43.246)
+*** anzen is on channel(s): #thelycaeum 
+*** anzen is/was on server herbert.freenode.net (DE)
+<Khmar> nase: ?
+<nase> no.shows some other error  [15:26]
+<Khmar> What's the error? Paste it and show me.
+<nase> yeah
+<nase> it worked
+<Khmar> Okay. Do the same for beautifulsoup4  [15:27]
+<nase> that is already done
+*** anzen516 (~ajoy@14.99.43.246) has joined channel #thelycaeum  [15:28]
+<Khmar> If you did that, why didn't you do the same with requests?
+*** anzen (0e632bf6@gateway/web/freenode/ip.14.99.43.246) has quit: Quit: Page
+    closed
+ERC> /who #thelycaeum
+*** #thelycaeum anzen516   H    ~ajoy@14.99.43.246 (Ajoy)
+*** #thelycaeum nase       H    ~nase@117.201.244.123 (Nase)
+*** #thelycaeum Khmar      H@   ~user@123.238.85.208 (Noufal Ibrahim
+    (nibrahim.net.in))
+*** #thelycaeum Kazmik     H    ~Kazmik@117.201.249.131 (...)
+<Khmar> Anyway.. Let's start.
+<nase> okay
+*** riaz_ (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has joined
+    channel #thelycaeum
+<Khmar> So, welcome everyone.
+<Khmar> welcome back riaz_ 
+<Khmar> Just starting.  [15:29]
+<Khmar> This is a quick introduction to the Python programming language. 
+<Khmar> We're not going to cover *everything* but enough to give you some
+	starting points.
+<Khmar> We're going to write a small program
+<Khmar> It's described here
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html
+<Khmar> The idea is to pick the National Geographic Picture of the day and
+	then use that as our wallpaper.  [15:30]
+<Khmar> Makes sense?
+<Khmar> This is the page
+	http://photography.nationalgeographic.com/photography/photo-of-the-day/
+<Khmar> Hello?  [15:31]
+<nase> yeah
+<Kazmik> yeah
+<anzen516> ok, good
+<Khmar> anzen516: What's your name?
+<Khmar> And where are you from?  [15:32]
+<anzen516> I'm ajoy
+<anzen516> studied at gec tcr, now at tvm, preparing for gate
+*** riaz__ (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has joined
+    channel #thelycaeum
+<Khmar> Now, Python like most languages comes with a "standard library"
+<Khmar> Just like C and Java.
+*** riaz_ (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has quit: Ping
+    timeout: 250 seconds  [15:33]
+<Khmar> The standard library is usually available at /usr/lib/python-2.7
+	(depending on your version number)
+<Khmar> Take a look. You'll see a lot of .py and .pyc files. 
+<Kazmik> yes
+<Khmar> Sorry.. /usr/lib/python2.7 (no -)
+<Khmar> These are files which are part of Python itself. i.e. if you install
+	Python, you'll automatically get all this.  [15:34]
+<Khmar> This is similar to C's "printf". 
+<Khmar> You don't have to separately install that to get it working. 
+<Khmar> Makes sense?  [15:35]
+<nase> yea
+<riaz__> yeah
+<riaz__> carry on
+<Khmar> Okay. Now, we need a few extra libraries to get our program to work. 
+<Khmar> One is a library called "requests" which is an HTTP client. We can use
+	this to fetch the page.  [15:36]
+<Khmar> The second is a library called "BeautifulSoup" which we can use to
+	parse the HTML which we get from the site. 
+<Khmar> These are not part of the standard library. 
+<nase> ok
+<Khmar> There are many ways to install these. One (bad) way is to download the
+	files and put them inside the standard library. This is messy for many
+	reasons.   [15:37]
+<Khmar> You'll mess up the stdlib (short for Standard library).
+<Khmar> You need administrator access to do this.
+<Khmar> You can't maintain these libraries (some might be unstable)
+<anzen516> ok. go on  [15:39]
+<Khmar> So, we use virtualenv.
+<Khmar> This is a tool that can create small isolated environments. 
+<Khmar> We can install libraries inside these environments without any issues.
+<Khmar> So, for example, if we have one project A, this can use libraries
+	b-0.5, c-0.7 and d-1.0
+<Khmar> Another project B can use libraries b-0.5, c-0.8, d-2.0  [15:40]
+<Khmar> And both of these can coexist without messing each other up.
+<Khmar> This allows us to keep project requirements separate.
+<Khmar> and manage things more easily.
+<Khmar> virtualenv is the tool that helps us create these "virtual
+	environments"
+<nase> it is used for python only?
+<Khmar> nase: Yes but most high level languages have something similar. 
+								        [15:41]
+<Khmar> ruby has rbenv and rvm
+<Khmar> etc.
+<nase> ok.
+<Khmar> virtualenvwrapper gives us some convenient functions for virtualenv. 
+<anzen516> so virtualenv creates an env so  that the project uses the stdlib +
+	   virtualenv.
+<Khmar> Like "mkvirtualenv" (to create a new one), "workon" (to switch to a
+	virtualenv).  [15:42]
+<Khmar> etc.
+<Khmar> anzen516: Yes.
+<Khmar> That's what we're doing here. First mkvirtualenv (to create a
+	virtualenv).
+<Khmar> In your prompts, try typing "workon natgeo".
+<Khmar> Then try typing "which python"  [15:43]
+<Khmar> It will give you the path of the interpreter inside a virtualenv
+<Khmar> After that, try typing "deactivate"
+<Khmar> and then "which python" again, it will give you the default system
+	python.
+<Khmar> Tried it?  [15:44]
+<nase> yeah
+<Khmar> Can you see it?
+<nase> it shows the path outside
+<nase> /usr/bin/python  [15:45]
+<riaz__> yeah /usr/bin/python
+<Khmar> You understand how it changed when you were inside and outside the
+	virtualenv?
+<riaz__> yes
+<Khmar> Let's move on then.  [15:46]
+<nase> yea
+<anzen516> yes, got it!!!
+<riaz__> k
+<Khmar> Now, we install two libraries using pip
+<Khmar> requests (HTTP client) and BeautifulSoup4 (HTML parser).
+<riaz__> actually what is pip??
+<Khmar> This is donw using "pip" (which is the Python library installer).
+<Khmar> This is done using "pip" (which is the Python library installer).
+<riaz__> ok
+<Khmar> pip is a tool that's used to install 3rd party libraries.   [15:47]
+<nase> ok
+<Khmar> I should say "manage" (instead of install) libraries.
+<Khmar> Since it can install/upgrade/uninstall etc.
+<riaz__> ok
+<Khmar> Think of it like a apt-get specific to Python.
+<nase> ok
+<Khmar> It will search pypi.python.org for packages and download/install them
+	onto your system.
+<Khmar> So, we install requests and BeautifulSoup4  [15:48]
+<anzen516> ok
+<Khmar> Now, let's write a simple program to fetch the page.
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5
+<nase> ok
+<Khmar> Create a file called ng_pod.py (for national geographic picture of the
+	day)
+<Khmar> and put the code in that section inside  [15:49]
+<Khmar> Let me know when you're done.
+<nase> yeah  [15:50]
+<Khmar> Let me explain it now.
+<nase> ok  [15:51]
+<Khmar> The first line "import requests" is similar in some sense to the
+	#include of C.
+<Khmar> It makes the requests library available to our program.
+<Khmar> However, in Python when you say "import x", you have to refer to all
+	functions in the library as x.func
+<Khmar> Not just func.
+<Khmar> It would be like as if you had to say stdio.printf in C.  [15:52]
+<Khmar> This is called namespacing.
+<anzen516> got it
+<Khmar> The next line (def ...) defines a function.  [15:53]
+<riaz__> ok
+<Khmar> The name of the function is fetch_url, The argument is a url stored
+	int he variable url
+<Khmar> Just after the function heading is a string "Fetches the page with the
+	given url and returns the body."  [15:54]
+<Khmar> 
+<Khmar> This is called a "docstring". 
+<Khmar> It's the documentation for the function.
+<Khmar> And will be available to us in the program.
+<Khmar> The body of the function (and of all blocks in general) is defined by
+	indentation (not by {} like in C).
+<Khmar> So, if you notice, all the statements that I want to put inside the
+	function are indented by a few spaces to the right.   [15:55]
+<Khmar> Makes sense?
+<anzen516> yes
+<riaz__> yes
+<Khmar> If you don't align all the statements properly, Python will complain
+	of a syntax error and abort.
+<nase> yea
+<riaz__> ok
+<nase> ok
+<Khmar> The body is quite simple.   [15:56]
+<Khmar> We call the `get` function inside the requests module
+<Khmar> and pass to it the url which we get.  [15:57]
+<Khmar> The return value will have a "content" attribute. That will contain
+	the actual body of the HTTP response.
+<Khmar> We return this.
+<Khmar> Not very complicated. Does it make sense?
+<riaz__> yeah
+<nase> yea
+<Khmar> Now, try running this.  [15:58]
+<Khmar> Save the file and start python
+<Khmar> then say import ng_pod
+<Khmar> and then ng_pod.fetch_url("http://....")
+<Khmar> Like in the notes.
+<Khmar> You'll notice it freeze for an instant as it fetches the URL  [15:59]
+<Khmar> and then you'll get the value back in the variable body.
+<anzen516> ng_pod
+<Khmar> Yes
+<riaz__> error :(  [16:00]
+<Khmar> What's the error?
+<nase> error
+<riaz__> no module named requests
+<Khmar> Is your virtualenv activated?
+<nase> the same as showed before.
+<Khmar> did you say workon natgeo before starting python?
+<nase> no module named requests
+<riaz__> yep (natgeo)riaz@xanium:  [16:01]
+<Khmar> riaz__: Then do a pip install requests
+<nase> oh,no
+<nase> now it works for me
+<Khmar> Good  [16:02]
+<Khmar> http://pastebin.com/Sb8Qd9TB
+<Khmar> riaz__: ?  [16:03]
+<riaz__> yeah working  [16:04]
+<Khmar> Okay.
+<anzen516> it worked
+<Khmar> Can you try running the program then? You should see the HTML output.
+<Khmar> Works?  [16:05]
+<riaz__> import ng_pod works fine
+<riaz__> but  ng_pod.fetchurl not working  [16:06]
+<Khmar> fetch_url
+<Khmar> That's the name we used in the file. 
+<riaz__> yes  [16:07]
+<riaz__> but it shows some error
+<Khmar> Give me the entire error.
+<Khmar> Did it work for nase and anzen516 ?
+<riaz__> (natgeo)riaz@xantium:~$ ng_pod.fetch_url
+	 ("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+	 bash: syntax error near unexpected token
+	 `"http://photography.nationalgeographic.com/photography/photo-of-the-day/"'
+								        [16:08]
+<anzen516> yes, it did, lot of text on the screen
+*** nase (~nase@117.201.244.123) has quit: Ping timeout: 268 seconds
+<Khmar> riaz__: Please follow the instructions on the site.
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5
+<riaz__> ok
+<Khmar> Especially here
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_1
+<Khmar> First start Python
+<Khmar> then in the interpreter, type "import ng_pod"  [16:09]
+<Khmar> Then type body =
+	ng_pod.fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+<Khmar> Then type "print body"
+<Khmar> Worked?  [16:10]
+<Khmar> ?  [16:11]
+<Khmar> Hello?  [16:13]
+<anzen516> i'm here  [16:14]
+<Khmar> I think riaz__ Dropped off. 
+<Khmar> as did nase
+<Khmar> Let's move on. 
+<Khmar> Okay. 
+<riaz__> nope :(
+<anzen516> okay
+<Khmar> What happened?
+<riaz__> its not working..
+<Khmar> What's the problem? Paste the error and show me
+<riaz__> when i import ng_pod it shows  No module named requests  [16:15]
+<Khmar> Before import ng_pod, just type "import requests" and hit enter. 
+<riaz__> >>> import ng_pod Traceback (most recent call last):   File
+	 "<stdin>", line 1, in <module>   File "ng_pod.py", line 1, in
+	 <module>     import requests ImportError: No module named requests
+	 >>>
+<Khmar> Does that work?
+<Khmar> Don't paste it here. Use pastebin.  [16:16]
+<riaz__> ok
+<Khmar> Before import ng_pod, just type "import requests" and hit enter. Does
+	that work?
+<riaz__> that is also not workin..
+<Khmar> Okay. 
+<Khmar> Exit your interpreter.
+<Khmar> Type "which python" and paste what you see.
+<riaz__> no
+<riaz__> ok
+<riaz__> >>> import ng_pod Traceback (most recent call last):   File
+	 "<stdin>", line 1, in <module>   File "ng_pod.py", line 1, in
+	 <module>     import requests ImportError: No module named requests
+	 >>>  [16:17]
+<anzen516> i think pip might not have worked. You would have to use sudo.
+<Khmar> anzen516: Don't use sudo.
+<Khmar> That will install requests inside the system path and corrupt it.
+<anzen516> i had to use sudo :(
+<Khmar> *Never* use sudo unless you know what exactly you're doing.
+*** nase (~nase@117.214.31.166) has joined channel #thelycaeum
+<Khmar> anzen516: That's because you ran it without activating your
+	virtualenv.
+<anzen516> oh!
+<Khmar> riaz__: What's the output of "whcih python"
+<Khmar> riaz__: What's the output of "which python"  [16:18]
+<Khmar> Welcome back nase 
+<Khmar> riaz__: Can you respond quickly? We're wasting time.
+<nase> oh.problem with network.Did i miss something?  [16:19]
+<Khmar> nase: Did the program work for you? Were you able to see the HTML
+	output?
+<nase> im working on it. lost connection  [16:20]
+<Khmar> okay
+<Khmar> Let me know if it works for all of you.  [16:21]
+<Khmar> anzen516: You shouldn't use sudo for anything unless you know that you
+	need system administrator privileges.
+*** riaz__ (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has quit: Ping
+    timeout: 250 seconds
+*** riaz (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has joined channel
+    #thelycaeum
+<nase> yea
+<nase> it works
+<Khmar> anzen516: The whole idea of using virtualenv (like I mentioned before)
+	is to avoid needing that in the first place.
+<anzen516> ok, i uninstalled both, and installed it in my env  [16:22]
+<Khmar> anzen516: You can create small environments inside your own
+	environment and deal with it there.
+<Khmar> riaz: ?
+<Khmar> riaz: Did it work for you? 
+<Khmar> Okay. now, we don't want to run this program like this by first typing
+	import and then running the fetch_url function  [16:24]
+<Khmar> We'd like to simply say "python ng_pod.py" and it should do its work.
+<Khmar> But if you try that from the shell, you'll see that it doesn't do
+	anything.
+*** riaz_ (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has joined
+    channel #thelycaeum
+<Khmar> This is because the program simply defines the fetch_url function but
+	doesn't actually call it.
+<Khmar> Makes sense?
+<riaz_> yeh working..
+<anzen516> yes
+<nase> ok  [16:25]
+<Khmar> So, we can change it to directly call fetch_url in the code itself
+	like I've done in the 3rd program under "Fetch the page"
+*** riaz (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has quit: Ping
+    timeout: 250 seconds
+<Khmar> But the problem with that is that it will actually call the fetch_url
+	function even when we import the file. This is bad.  [16:26]
+<Khmar> What we're like is to run the function only if we directly execute the
+	program. If we import, we don't want it to do anything. Correct?
+<anzen516> yes  [16:27]
+<nase> yea
+<riaz_> yes
+<Khmar> When we import a module (which is the python term for a library), a
+	variable called __name__ will be created.  [16:28]
+<Khmar> __ is two underscores (Shift -)
+<Khmar> If a module (say ng_pod) is imported, __name__ will be "ng_pod"
+<Khmar> If a module is directly run from the command line, __name__ will be
+	"__main__"
+<Khmar> So, we put an "if" statement in the file.  [16:30]
+<Khmar> if __name__ == "__main__":
+<Khmar>    fetch_url(...)
+<Khmar> this will run only if the module was directly run from the command
+	line.
+<nase> okay
+<Khmar> If we import it, the __name__ will be "ng_pod" so it run the fetch_url
+	function.  [16:31]
+<Khmar> Does that make sense?
+<Khmar> This is a common python trick.
+<anzen516> yes
+<Khmar> The next thing we're doing is parsing the actual document. For that,
+	we write a get_image_url function.  [16:32]
+<Khmar> Please interrupt me if you don't understand. We wasted a lot of time
+	today and I'd like to wrap up by 1700.
+<Khmar> The function is similar to the one we already wrote.
+<Khmar> It has a def header and then a docstring.
+<Khmar> In Python, if you want to make a multiline string, you can use """ or
+	'''  [16:33]
+<Khmar> (triple quotes)
+<Khmar> The function receives some HTML output.
+*** riaz_ (75c9f6ff@gateway/web/freenode/ip.117.201.246.255) has quit: Ping
+    timeout: 250 seconds
+<Khmar> You can see a new import statement on the top
+<Khmar> from bs4 import BeautifulSoup4
+<Khmar> from bs4 import BeautifulSoup
+<anzen516> yes  [16:34]
+<Khmar> This is similar to the other statement but makes the BeautifulSoup
+	object availabe in the current namespace.
+<Khmar> So we can simply say BeautifulSoup instead of bs4.BeautifulSoup
+<Khmar> In the function, we create a soup object by called BeautifulSoup with
+	the HTML input  [16:35]
+<Khmar> soup = BeautifulSoup(page)
+<Khmar> The image is the "img" tag inside the first "div" tag with class =
+	"primary_photo". We find this by reading the page source once.
+<Khmar> The code finds the first <div class="primary_photo">
+<Khmar> and then gets the "img" tag from inside that and then gets the src
+	attribute from that. This is the actual image.  [16:36]
+<Khmar> We return this URL.
+<Khmar> Does that make sense?
+<nase> yea
+<anzen516> yes  [16:37]
+<Khmar> We also add some code inside the if __name__... block
+<Khmar> to actually call the get_image_url  [16:38]
+<Khmar> function
+<Khmar> If you run this program, It will print the URL to the image.
+<Khmar> The next stage, we actually fetch this image. We can do this using the
+	fetch_url function.  [16:39]
+<Khmar> So, we add some code to dot hat.
+<Khmar> You can see it here
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_3
+<Khmar> You'll see some new code there which uses the "with" statement. See
+	it?  [16:40]
+<nase> yea
+<Khmar> The with statement creates a context which can have some extra
+	variable bindings. When you leave the context, the bindings will
+	automatically be removed. 
+<Khmar> When we say `with open("image.jpg") as f:`, it will open the file
+	"image.jpg" and make the variable f point to the file handle.
+								        [16:41]
+<Khmar> When we exit the block, it will automatically close the file handle.
+<Khmar> This is a neater way of writing something like
+<Khmar> f = open("image.jpg", "wb")
+<Khmar> f.write(data)
+<Khmar> f.close()
+<Khmar> It's neater to say  [16:42]
+<Khmar> with open("image.jpg", "wb") as f:
+<Khmar>    f.write(data)
+<Khmar> Make sense?
+<nase> yeah.
+<Khmar> You'll often find things in Python like
+<Khmar> with get_lock():
+<Khmar>    Run_function()
+<Khmar> or maybe
+<Khmar> with log_set(0):  [16:43]
+<Khmar>   # Run without logging
+<Khmar>   function()
+<Khmar> etc.
+<nase> ok  [16:44]
+<Khmar> Try running the program.
+<anzen516> ok
+<Khmar> You should see an image.jpg in the directory.  [16:45]
+<anzen516> file saved
+<anzen516> image downloaded and saved
+<Khmar> nase: ?  [16:46]
+<Khmar> The next step is to actually set the background.  [16:47]
+<Khmar> For this, if you're using a normal desktop manager (not the new Ubuntu
+	thing), you can set it using the `qiv` command
+<Khmar> Let's write a new function set_desktop_background -
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_4
+								        [16:48]
+<Khmar> The python standard library module "subprocess" allows us to run
+	external commands.
+<Khmar> So, we first create the command we want to run command = "qiv --root_s
+	%s"%image_file  [16:49]
+<Khmar> The %s inside the "" is substituted by the image_file variable after
+	the %
+<Khmar> It's similar to how C's sprintf works
+<Khmar> The subprocess module has a function called "call" which can run a
+	program. It requires the program to be passed as a list rather than a
+	string.  [16:50]
+<Khmar> So ["qiv", "--root_s", "image.jpg"] instead of "qiv --root_s
+	image.jpg".
+<Khmar> Strings have a "split" method which will split them into strings at
+	whitespaces.  [16:51]
+<anzen516> its not working! OSError: [Errno 2] No such file or directory. Is
+	   it because i have ubuntu 12.04 with unity?  [16:52]
+<Khmar> anzen516: Install qiv first.
+<anzen516> ok
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-3
+<Khmar> And we add some code to the if __name__... part to actually run this
+								        [16:54]
+<anzen516> no errors, but the background has not been set
+<Khmar> Ubuntu?
+<Khmar> Unity?
+<anzen516> yes, 12.04  [16:55]
+<anzen516> yes, unity
+<Khmar>
+	http://askubuntu.com/questions/66914/how-to-change-desktop-background-from-command-line-in-unity
+<Khmar> 
+<Khmar> Ubuntu is not very developer friendly so you'll have to figure out
+	another command that works there.
+<Khmar> But that's just once part of the program to change. 
+<anzen516> ok.. i'll tell you when i get it  [16:56]
+<Khmar> Let's move on.
+<Khmar> Now the if __name__ part has grown quite a bit.
+<Khmar> We can move all that into a "main" function. 
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_5
+<Khmar> And then simply call "main" inside the if __name__ part.
+<Khmar> MAkes sense?  [16:59]
+<anzen516> yes
+<Khmar> We use the sys module to exit once we have a return value.
+<Khmar> sys.exit returns back to the system the value whcih was passed into
+	it.  [17:00]
+<Khmar> the main function returns 0 on no error 
+<Khmar> and we get send it back to the OS.
+<Khmar> Fine?  [17:01]
+ERC> /who #thelycaeum
+*** #thelycaeum nase       H    ~nase@117.214.31.166 (Nase)
+*** #thelycaeum anzen516   H    ~ajoy@14.99.43.246 (Ajoy)
+*** #thelycaeum Khmar      H@   ~user@123.238.85.208 (Noufal Ibrahim
+    (nibrahim.net.in))
+*** #thelycaeum Kazmik     H    ~Kazmik@117.201.249.131 (...)
+<anzen516> yes  [17:02]
+<anzen516> i got it well. gsettings changed the bg
+<Khmar> anzen516: What command did you run?  [17:03]
+<anzen516> gsettings set org.gnome.desktop.background picture-uri
+	   file:///home/name/natgeo/%s"  [17:04]
+<Khmar> ?
+<Khmar> Cool. Thanks.
+<anzen516> welcome.
+<Khmar> Well, that wraps it up.  [17:05]
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html
+<Khmar> has two enhancements which you should be able to follow by yourself
+<Khmar> as well as 3 pieces of homework that you can try and mail back to the
+	list.  [17:06]
+<Khmar> Apart from that, we're done.
+<Khmar> Thanks for participating.   [17:07]
+<Khmar> I hope it was useful to you.
+<anzen516> thanks, it was good! and useful too!!
+<Khmar> You're welcome.  [17:08]
+<Khmar> I'll put this chat transcript on the website.
+ERC> 
