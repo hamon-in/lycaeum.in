@@ -1,0 +1,711 @@
+
+
+
+[Sat Oct  5 2013]
+*** You have joined channel #thelycaeum  [14:46]
+*** Users on #thelycaeum: Khmar Ligin
+*** #thelycaeum modes: +cnt
+*** #thelycaeum was created on 2013-09-12 18:28:06
+ERC> /help chanserv
+ERC> /msg chanserv help
+*** power-inside (~p0wer-ins@117.201.253.223) has joined channel #thelycaeum
+*** ChanServ (ChanServ@services.) has changed mode for #thelycaeum to +o Khmar
+								        [14:47]
+<Khmar> Hello power-inside Ligin 
+ERC> /whois power-inside 
+*** power-inside is Mohammed Irfan (~p0wer-ins@117.201.253.223)
+*** power-inside is on channel(s): #thelycaeum 
+*** power-inside is/was on server cameron.freenode.net (Vilnius, Lithuania,
+    EU)
+*** power-inside has been idle for 00:01.00, on since 2013-10-05 14:47:59
+*** power-inside is logged in as PowerInside
+ERC> /whois Ligin 
+*** Ligin is 117.208.243.198 - http://webchat.freenode.net
+    (75d0f3c6@gateway/web/freenode/ip.117.208.243.198)
+*** Ligin is on channel(s): #thelycaeum 
+*** Ligin is/was on server herbert.freenode.net (DE)
+<power-inside> Hi Khmar! :)
+<power-inside> hello ligin!
+<Khmar> I'll be back in a little while. The official starting time is 1500. 
+								        [14:49]
+<power-inside> ok
+<Khmar> I forgot to email earlier. Not sure how many people are going to show
+	up.  [14:50]
+<power-inside> Oh.  [14:52]
+<power-inside> In that case, would it be okay if I call a few friends in?
+	       They're interested in programming and are students. (but not in
+	       Kerala)
+<Khmar> sure  [14:53]
+*** dnene (7aa900bc@gateway/web/freenode/ip.122.169.0.188) has joined channel
+    #thelycaeum
+<Khmar> hi dnene   [14:55]
+
+[Sat Oct  5 2013]
+*** You have joined channel #thelycaeum  [14:59]
+*** Users on #thelycaeum: Khmar` dnene power-inside Ligin
+*** #thelycaeum modes: +cnt
+*** #thelycaeum was created on 2013-09-12 18:28:06
+ERC> /msg Chanserv ghost Khmar victorinox
+ERC> /msg Nickserv ghost Khmar victorinox  [15:00]
+*** Your new nickname is Khmar
+ERC> /msg chanserv ops Khmar #thelycaeum
+ERC> /msg chanserv op Khmar #thelycaeum
+*** dnene (7aa900bc@gateway/web/freenode/ip.122.169.0.188) has quit: Ping
+    timeout: 250 seconds  [15:01]
+ERC> /msg chanserv op #thelycaeum Khmar
+*** ChanServ (ChanServ@services.) has changed mode for #thelycaeum to +o Khmar
+ERC> /ping Ligin   [15:02]
+*** Ping time to Ligin is 00:00.01
+<Khmar> You around Ligin ?
+<Ligin> Yes
+<Khmar> You're also from AWH. Correct?
+<Ligin> Yes  [15:03]
+*** dnene (7ab39179@gateway/web/freenode/ip.122.179.145.121) has joined
+    channel #thelycaeum
+<Khmar> wb dnene 
+<Ligin> Hi Dnene
+<dnene> sorry, my net connection is spotty today. May go offline at airtel's
+	will
+<dnene> hi all.
+<Khmar> IRC is generally more resilient though when it comes to slow
+	connections on users.  [15:04]
+<dnene> ok. I rarely use irc. so coming in thru the webclient. besides the
+	connection has dropped thrice in the last hr (not slow)
+ERC> /topic Online Basic Python course every Saturday at 1500 ISR. Course material at http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-3. Please use pastebin.com to share large amounts of text rather than pasting here.
+								        [15:05]
+*** Khmar (~user@117.217.231.124) has set the topic for #thelycaeum: "Online
+    Basic Python course every Saturday at 1500 ISR. Course material at
+    http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-3. Please
+    use pastebin.com to share large amounts of text rather than pasting here."
+<Khmar> Looks like only Ligin is around.   [15:06]
+*** JIGS12 (7aaedff1@gateway/web/freenode/ip.122.174.223.241) has joined
+    channel #thelycaeum
+<Khmar> Though power-inside said that some of his friends might want to join.
+<Khmar> Ah.
+<Ligin> I think power-inside will join soon...  [15:07]
+<Khmar> Hello JIGS12 
+*** power-inside (~p0wer-ins@117.201.253.223) has quit: Ping timeout: 264
+    seconds
+<JIGS12> hello @Khmar
+<Khmar> Can you introduce yourself JIGS12 ?  [15:08]
+*** dnene (7ab39179@gateway/web/freenode/ip.122.179.145.121) has quit: Ping
+    timeout: 250 seconds  [15:09]
+<JIGS12> I have completed my BCA and waiting for my MCA addmission.
+<Khmar> Where are you from? What's your name? 
+<Khmar> I'm Noufal. I the #thelycaeum  [15:10]
+<JIGS12> I like to work with web development my fav Language is PHP.
+<JIGS12> My name is Jigar. I am from Calicut.  [15:11]
+*** anto (~anto@117.253.157.225) has joined channel #thelycaeum
+<anto> Hello Khmar, Anto Jose here
+<Khmar> Hello anto   [15:12]
+<Khmar> JIGS12: Cool. Are you on the lycaeum mailing list?
+<anto> Have we started today's session?
+*** power-inside (~p0wer-ins@117.221.248.79) has joined channel #thelycaeum
+<Khmar> anto: Not yet. No
+*** dnene (~dhananjay@101.63.20.251) has joined channel #thelycaeum
+<JIGS12> No khmar
+<Khmar> You can sign up at http://thelycaeum.in/resources.html if you're
+	interested. I make announcements about such trainings and other events
+	there. If you have friends who might be interested, do tell them as
+	well.  [15:13]
+*** Danial (75de94b6@gateway/web/freenode/ip.117.222.148.182) has joined
+    channel #thelycaeum
+<JIGS12> hey power-inside
+<JIGS12> Khmar i joined the list :)  [15:14]
+ERC> /whois Danial 
+*** Danial is 117.222.148.182 - http://webchat.freenode.net
+    (75de94b6@gateway/web/freenode/ip.117.222.148.182)
+*** Danial is on channel(s): #thelycaeum 
+*** Danial is/was on server herbert.freenode.net (DE)
+<Khmar> Cool.
+<Khmar> Hello Danial 
+<power-inside> help: Xchat doesn't timeout/reconnect when there's a network
+	       problem. I have to manually close the connection and
+	       reconnect. hard to tell if my network is frozen. No visual
+	       cues.. Any quick fix?
+<Ligin> Already on the list...  [15:15]
+<power-inside> Hi JIGS12
+<Danial> Hi
+<Khmar> power-inside: Not sure really.
+<Khmar> It must have some kind of notifications system.
+<Khmar> Danial: Introduce yourself? :)  [15:16]
+<power-inside> Khmar: Nope.. nothing.. nothing on the freenode tab either. :/
+<Danial> Hi friends
+<Danial> I'm Danial Jose, from Angamly, Cochin  [15:17]
+<power-inside> Khmar: This is the only annoying thing with the xchat IRC I've
+	       ever encountered.. maybe I'll try a different client.
+<power-inside> Hello Danial!  [15:18]
+<Khmar> There is an auto-reconnect setting in xchat. 
+<Khmar> Danial: Are you a student too?
+<Khmar> (We'll start in about 10 minutes)
+<JIGS12> Hi Danial
+<Danial> Yes, but currently I am working for recruting company in Cochin.
+								        [15:19]
+<Khmar> Ah okay. 
+<Khmar> Danial: You can sign up on the lycaeum mailing list at
+	http://thelycaeum.in/resources.html if you're interested in staying
+	upto date about other courses which I run.  [15:20]
+<Danial> We have a linux user group in Cochin http://ilug-cochin.org
+<Khmar> Danial: Cool. I'd like something like that to be active in calicut as
+	well but it's not (yet) here. I'm working on changing that. :)
+								        [15:21]
+<Khmar> I'll try to drop by for one of the meetings when I'm in Cochin next. 
+<Khmar> Anyway... Shall we start?  [15:22]
+<Khmar> The course material is at
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-3
+<Ligin> Ok
+<dnene> k
+<Khmar> I'm presuming that people are all running Linux and that you have the
+	setup working? i.e. Upto
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-4
+<Danial> ok  [15:23]
+<Khmar> Ligin, power-inside JIGS12 ?
+<Ligin> Yes done...
+<power-inside> Yeah all done
+<JIGS12> Khmar i am nt on linux  [15:24]
+<Khmar> JIGS12: Python works on Windows as well but the setup instructions
+	will be different and I don't have materials for Windows ready.
+<JIGS12> no problem khmar
+<JIGS12> u carry on i am trying to get it :)  [15:25]
+<Khmar> Okay.
+<Khmar> Let's start then.
+<Khmar> Firstly... Python. 
+<Khmar> Python is a general purpose dynamically typed language. It's been
+	around for two decades now. 
+<Khmar> It's quite popular in many companies and there are many sub
+	communities that have Python at their core.   [15:26]
+<Khmar> e.g. It's used for web development (disqus.com uses Python for
+	example)
+<Khmar> It's used for games (the pygame library is in active development and
+	many popular game related libraries have Python bindings. Also, python
+	is often used a language embedded within games for scripting).
+								        [15:27]
+<Khmar> Feel free to interrupt me if you have questions. We're a small group
+	so I think it's okay to not have dedicated question time.
+<Ligin> fine.
+<Khmar> Python is also actively used in the scientific computing field with
+	libraries like NumPy and various other toolkits.
+<Khmar> It, like all languages, has it's own set of advantages and
+	disadvantages. We're going to try to learn it a little today by
+	writing a simple "real" program (rather than something to print your
+	name 10 times).  [15:28]
+<Ligin> Cool
+<Khmar> Have you seen the national geographic picture of the day?  [15:29]
+<Khmar> The URL is
+	http://photography.nationalgeographic.com/photography/photo-of-the-day/
+<Khmar> We're going to try to a program to get that image and set it as our
+	wallpaper.
+<Khmar> Makes sense?  [15:30]
+<power-inside> yep
+<Ligin> yes.
+<Khmar> Danial, JIGS12 ?
+<Danial> ok
+<JIGS12> yes
+<Khmar> So the first thing is to install Python.  [15:31]
+<Ligin> ok
+<Khmar> Python comes with a standard library. Everyone here familiar with
+	(atleast basic) C?
+<JIGS12> yes
+<Ligin> yes
+<Danial> yes  [15:32]
+<Khmar> So, C has a standard library. You have functions like printf, scanf
+	etc.
+*** p0werinside (~p0wer-ins@117.221.248.79) has joined channel #thelycaeum
+<Khmar> Python has something similar. 
+<Khmar> We have libraries for things like HTTP (accessing the web), sending
+	email, processing various file types etc.
+*** p0werinside (~p0wer-ins@117.221.248.79) has left channel #thelycaeum:
+    #thelycaeum  [15:33]
+<Khmar> However, for this project, we need 2 libraries that are not in the
+	stdlib (standard library).
+*** powerinside (~p0wer-ins@117.221.248.79) has joined channel #thelycaeum
+<Khmar> These are 1. BeautifulSoup (for parsing HTML) and 2. Requests (for
+	fetching pages off the net).
+<Khmar> Makes sense?
+<JIGS12> yes  [15:34]
+<powerinside> Yeah
+<Khmar> One way of getting these libraries is to download them and put
+	alongside the stdlib. 
+<Ligin> ok
+<JIGS12> ok
+<Khmar> The standard library is usually located at /usr/lib/python2.7/ (for
+	python version 2.7).
+<Danial> ok
+<Khmar> We could just download BeautifulSoup and requests and put them in
+	there.
+<Khmar> But this is ugly.   [15:35]
+<Khmar> For many reasons.
+<Khmar> 1. We are polluting the stdlib. 
+<Khmar> 2. We cannot have separate projects using separate versions of these
+	libraries.
+<Khmar> 3. If a 3rd party library has the same name as a standard library
+	module, we'll end up clobbering it. 
+*** khan_ (75d0f6dd@gateway/web/freenode/ip.117.208.246.221) has joined
+    channel #thelycaeum
+*** power-inside (~p0wer-ins@117.221.248.79) has quit: Ping timeout: 260
+    seconds
+<Khmar> These are problems so we don't do them.  [15:36]
+<Khmar> Make sense?
+<JIGS12> ok
+<powerinside> I'm convinced now. :)
+<Khmar> To get by this, we have a tool called virtualenv (Virtual Environment)
+								        [15:37]
+*** Solvin (310f872d@gateway/web/freenode/ip.49.15.135.45) has joined channel
+    #thelycaeum
+<Khmar> This allows us to create environments which have all the extra libs
+	that we need.
+<Khmar> So we can create one called "natgeo" for our national geographic
+	project.  [15:38]
+<JIGS12> kool
+<Khmar> We can create another one called "jamesbond" for our top secret spy
+	project.
+*** Ligin (75d0f3c6@gateway/web/freenode/ip.117.208.243.198) has quit: Ping
+    timeout: 250 seconds
+<Khmar> And each of these can have libraries installed inside them that don't
+	interfere with the stdlib.
+<Khmar> The environments will give you stdlib + 3rd party lib.  [15:39]
+<Khmar> The environments will give you stdlib + 3rd party libs.
+<Khmar> The environments will give you stdlib + 3rd party libs installed
+	inside them. 
+<Khmar> Sorry. Hitting enter too quickly. :)
+<Khmar> Makes sense?
+<powerinside> ie, the environments are by themselves the 'polluted' ones..
+								        [15:40]
+<Khmar> powerinside: Well, smoke is pollution only if it's in clean air. :)
+<Khmar> By itself, it's not polluted. 
+<JIGS12> yes got it
+<powerinside> yeah I mean those isolated virtualenvs..
+<JIGS12> is this like creating packages
+<Khmar> We just keep the 3rd party libs separate so that the stdlib is
+	untouched. 
+<Khmar> JIGS12: Not exactly. That's something else. This is like
+	"dependencies" (if you're familiar with the term).  [15:41]
+<JIGS12> ok gt it
+<Khmar> Hello khan_ Solvin 
+*** ligin (75dd9cb1@gateway/web/freenode/ip.117.221.156.177) has joined
+    channel #thelycaeum
+ERC> /whois khan_ 
+*** khan_ is 117.208.246.221 - http://webchat.freenode.net
+    (75d0f6dd@gateway/web/freenode/ip.117.208.246.221)
+*** khan_ is on channel(s): #thelycaeum 
+*** khan_ is/was on server herbert.freenode.net (DE)
+ERC> /whois Solvin 
+*** Solvin is 49.15.135.45 - http://webchat.freenode.net
+    (310f872d@gateway/web/freenode/ip.49.15.135.45)
+*** Solvin is on channel(s): #thelycaeum 
+*** Solvin is/was on server herbert.freenode.net (DE)
+<Khmar> wb ligin. I will be posting the transcript online so that you can
+	refer to parts you've missed. 
+<ligin> where do i find it??  [15:42]
+<Khmar> There's also a tool called virtualenvwrapper which allows you manage
+	virtualenvs easily.
+<Khmar> ligin: I'll send the details to the list, twitter, facebook once I'm
+	done .
+<powerinside> ligin: The link will be posted later
+<ligin> Ok.thanks
+<Khmar> So, install virtualenv and virtualenvwrapper as I've mentioned in the
+	page
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-4
+								        [15:43]
+<Khmar> and then run "mkvirtualenv natgeo"
+<Khmar> YOu might have to run ". /etc/bash_completion.d/virtualenvwrapper"
+	first to make mkvirtualenv available.
+<Danial> done  [15:44]
+<ligin> Done
+<Khmar> YOu should see your prompt change. It will have (natgeo) in front of
+	it now.
+<Khmar> Does it?
+*** Solvin_ (310f872d@gateway/web/freenode/ip.49.15.135.45) has joined channel
+    #thelycaeum
+<Khmar> My prompt looks like this now "(natgeo)% "  [15:45]
+<Danial> (natgeo)danial@danial-acer-aspire-4736z:~$
+<powerinside> (natgeo)[root@arch pythonws]#
+<Khmar> powerinside: Good but you shouldn't do any work as root.
+<Khmar> We're being careful to not pollute the stdlib. Root can (and usually)
+	does pollute everything if you work as him.
+<ligin> (natgeo1)ligin@ubuntu:/usr/lib/python2.7$
+<powerinside> ah ok
+<Khmar> You should work as root only if you're doing some maintenance or
+	something like that. Not for daily work.  [15:46]
+<powerinside> Khmar: was updating via pacman.
+<Solvin_> i'm sorry i hav no access to a pc right nw,  following frm my
+	  cellphone,  will b tryin this out once i reach home
+*** Solvin (310f872d@gateway/web/freenode/ip.49.15.135.45) has quit: Ping
+    timeout: 250 seconds
+<Khmar> Solvin_: Cool. I'll be posting this transcript online when I'm done. 
+<Khmar> So we all have our environments.  [15:47]
+<Khmar> If you try typing "which python" and hitting enter, you'll see the the
+	path to the interpreter inside the virtualenv
+<Khmar> Try it?
+<Solvin_> thnku
+<Khmar> Solvin_: Get on the lycaeum mailing list at
+	http://thelycaeum.in/resources.html
+<Khmar> Solvin_: To get the details when I'm done  [15:48]
+<powerinside> Oh so virtualenv made a copy of the python binary!
+<Khmar> powerinside: Yup.
+<Khmar> Now try running "deactivate"
+<Khmar> You'll get "out" of the virtualenv then.
+<Khmar> If you type "which python" there, you should get the system python.
+								        [15:49]
+<Khmar> i.e. /usr/bin/python (or something similar)
+<powerinside> ok now I kinda get the internals of virtualenv :D
+<Khmar> Now get back inside it using "workon natgeo"
+<Danial> exactly
+<Khmar> Does thsi make sense?
+*** ligin (75dd9cb1@gateway/web/freenode/ip.117.221.156.177) has quit: Quit:
+    Page closed
+<powerinside> perfect
+<Khmar> Cool. Now, enter the virtualenv (using "workon natgeo") and then
+	install the 3rd party libraries we need.   [15:50]
+<Khmar> The python package management program is called "pip"
+<Khmar> So type "pip install requests" and "pip install BeautifulSoup4" (both
+	while you're inside the virtualenv).
+<Khmar> and it will install them inside the virtualenv for you.
+<Khmar> Do it?
+<Khmar> Let me go get my charger. Be back in 5.  [15:51]
+<powerinside> ok
+<JIGS12> k
+*** khan_ (75d0f6dd@gateway/web/freenode/ip.117.208.246.221) has quit: Quit:
+    Page closed
+<Khmar> Right.  [15:52]
+<Danial> requests 362 KB
+<Khmar> ?
+<Khmar> Worked?
+<Khmar> Did you get it?
+<Danial> yes
+<Khmar> If you did, then launch python using "python"
+<Khmar> and then try typing "import requests" and hitting enter.  [15:53]
+<Khmar> It should work without any errors.
+<Khmar> Also try "import bs4" 
+<Khmar> Did that work for everyone?
+<powerinside> ye
+<powerinside> s
+<Khmar> Anyone have trouble?   [15:54]
+<Danial> done
+<Khmar> Okay. Now, we're finally ready to start coding.   [15:55]
+<Danial> >>> import requests >>> import bs4 >>>
+<Khmar> Danial: Cool.  [15:56]
+<Khmar> I'll assume that no news is good news so paste your output only if you
+	have errors. :)
+<Khmar> The first thing is to fetch the page.
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_1
+<Khmar> For this we write a little program 
+<Khmar> The first line is "import requests"
+<Khmar> This makes the requests library (or module as it's called in Python)
+	available to our program. It's conceptually (though not really)
+	similar to the #include in C.  [15:57]
+<Khmar> Only difference is that if we "import" something, it will be available
+	to us under the module namespace.   [15:58]
+<Khmar> In C, if we say "#include <stdio.h>", we can simply call printf.
+*** p0werinside (~p0wer-ins@117.214.20.198) has joined channel #thelycaeum
+<Khmar> In python, if had said "import stdio", we'd have to say something like
+	"stdio.printf"
+<Khmar> Everything has to prefixed by the name of the module.
+<Khmar> That's called a "namespace"
+<Khmar> A space inside which all the "names" of the module are there.  [15:59]
+<Khmar> Makes sense?
+<p0werinside> yea
+<Danial> yes  [16:00]
+<Khmar> So, we import requests   [16:01]
+*** powerinside (~p0wer-ins@117.221.248.79) has quit: Ping timeout: 246
+    seconds
+<Khmar> Then we create a function
+<Khmar> A function is defined using the "def" keyword. 
+*** Solvin (310f872d@gateway/web/freenode/ip.49.15.135.45) has joined channel
+    #thelycaeum  [16:03]
+<Khmar> We create a function called fetch_url.
+<Khmar> It has one argument url which is for the URL to fetch.
+<Khmar> The string right under the function definition is, in python, called a
+	"docstring".
+<Khmar> It's used to write documentation for the function and is a good
+	practice. You should do this for functions you write.
+*** Solvin_ (310f872d@gateway/web/freenode/ip.49.15.135.45) has quit: Ping
+    timeout: 250 seconds  [16:04]
+<Khmar> Sensible?
+<p0werinside> yeah  [16:05]
+<Khmar> Then the body is fairly simple. We call the "get" function inside the
+	requests module with the URL given.
+<Khmar> It will return the HTTP response which we store as "r".
+<Khmar> r.content will be actual body of the response. 
+<Khmar> We "return" that in our function.
+<Khmar> Simple. 
+<Khmar> Everyone with me? Danial p0werinside JIGS12?  [16:06]
+<p0werinside> Yep
+<Danial> yes
+<Khmar> Okay.   [16:07]
+<p0werinside>  /ping JIGS12
+<Khmar> Now write that into a file called ng_pod.py (For national geographic
+	picture of teh day)
+<Khmar> and save it. 
+<Khmar> Please type it in and don't cut/paste. :)  [16:08]
+<p0werinside> already have it written from last workshop..
+<Khmar> If you're done, start your python interpreter  [16:09]
+<Khmar> and then do
+<Khmar> import ng_pod
+<Khmar> and then
+<Khmar> page =
+	ng_pod.fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+<JIGS12> i am here
+<Khmar> Then 
+<Khmar> print page
+<Khmar> And let me know what you see.
+<Khmar> ?  [16:10]
+<p0werinside> its huge lol
+<Khmar> Yes. But you see the HTML?  [16:11]
+<p0werinside> yeah the source code of that page
+<Khmar> Danial: ?
+<Danial> no  [16:12]
+<Khmar> What do you see?  [16:13]
+<Khmar> ?  [16:15]
+ERC> /ping Danial 
+*** Ping time to Danial is 00:00.02
+<Khmar> Danial: Do you see an error? If so, can you paste it on pastebin.com
+	and show me?
+<p0werinside> Um.. I think he must be working on the source code and his IRC
+	      window might be out of view.
+<Khmar> Maybe....  [16:16]
+<Danial> SyntaxError: invalid syntax  [16:17]
+<Khmar> Can you put the entire output on pastebin.com and share the URL?
+<Khmar> Otherwise, I can't help.
+<Khmar> Danial: We need to move on. Please show me the error you're getting.
+								        [16:19]
+<Khmar> Okay.   [16:20]
+* p0werinside feels IRC isn't a good platform after all.
+<Khmar> It's got it's own limitations.
+<Khmar> But it's got street cred. A lot of high traffic projects do
+	collaborate using IRC.  [16:21]
+<Khmar> So, this is good but if you try to run ng_pod.py directly from the
+	command line "python ng_pod.py", it won't give you any output. 
+<p0werinside> Yeah, but not really that user friendly and there are a lot of
+	      limitations like you said
+<Khmar> This is because you're only defining the function and not actually
+	calling it in the file.
+<Khmar> We can fix that by sticking an
+	fetch_url("http://photography.nationalgeographic.com/photography/photo-of-the-day/")
+	at the end of the function.  [16:22]
+<Khmar> Sorry. At the end of the program.
+ERC> /q Danial 
+<Khmar> Now if you run it, it will work fine.
+<Khmar> But the problem is that even if you import it in the program, the page
+	fetch is done. This is ugly.  [16:23]
+ERC> /who #thelycaeum
+*** #thelycaeum Solvin     H    310f872d@gateway/web/freenode/ip.49.15.135.45
+    (49.15.135.45 - http://webchat.freenode.net)
+*** #thelycaeum p0werinside H    ~p0wer-ins@117.214.20.198 (Mohammed Irfan)
+*** #thelycaeum Danial     H
+    75de94b6@gateway/web/freenode/ip.117.222.148.182 (117.222.148.182 -
+    http://webchat.freenode.net)
+*** #thelycaeum dnene      H    ~dhananjay@101.63.20.251 (Dhananjay Nene)
+*** #thelycaeum anto       H    ~anto@117.253.157.225 (Anto Jose)
+*** #thelycaeum JIGS12     H
+    7aaedff1@gateway/web/freenode/ip.122.174.223.241 (122.174.223.241 -
+    http://webchat.freenode.net)
+*** #thelycaeum Khmar      H@   ~user@117.217.231.124 (Noufal Ibrahim
+    (nibrahim.net.in))
+<Khmar> Python creates a variable called __name__ automatically.   [16:24]
+<Khmar> In the program which you actually run, this variable will have the
+	value "__main__"
+<Khmar> In a module which you import (say ng_pod), this will hold the name of
+	the module "ng_pod".
+<Khmar> So, we can use this to make the module behave differently when
+	imported and when run.
+<Khmar> Makes sense?  [16:25]
+<p0werinside> yep  [16:26]
+<Khmar> Now, if you run the module directly from the command line, you'll get
+	the page contents. 
+<Khmar> If, however, you "import" it, it won't run anything till you manually
+	do so.
+<Khmar> The next step is to get the image out of the document. For this we
+	write another function called "get_image_url"
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_2
+<Khmar> Look through the code. 
+<Khmar> We have another import at the top "from bs4 import BeautifulSoup"
+								        [16:27]
+<p0werinside> "from" makes using namespaces unnecessary right
+<Khmar> This is different from the other import where we directly import the
+	module. In this case, we import the module (bs4) but we will be using
+	only the BeautifulSoup object inside that.
+<Khmar> p0werinside: Yes. It makes the things you specify available in the
+	current namespace.
+<Khmar> So we could either say  [16:28]
+<Khmar> import bs4 
+<Khmar> and then
+<Khmar> bs4.BeautifulSoup
+<Khmar> or
+<Khmar> from bs4 import BeautifulSoup
+<p0werinside> yeah got it.
+<Khmar> and then just use BeautifulSoup directly.
+<Khmar> The from form is used mostly when you're interested in just one or two
+	things inside the module.
+<Khmar> The function get_image_url looks similar. Only thing is the docstring
+	is now covered using """ which is Python's way of specifying multi
+	line strings.  [16:29]
+*** Danial (75de94b6@gateway/web/freenode/ip.117.222.148.182) has quit: Ping
+    timeout: 250 seconds  [16:30]
+<p0werinside> That doc string could have been a single line one as well.
+<Khmar> Sure. 
+*** JIGS12 (7aaedff1@gateway/web/freenode/ip.122.174.223.241) has quit: Quit:
+    Page closed  [16:31]
+<Khmar> But I made it multi line just to talk about """
+<p0werinside> Yeah
+<Khmar> So, we create a "soup" object with the page contents we have and we
+	lookt hrough it.  [16:32]
+<Khmar> The first soup.find is used to find the "div" with class
+	"primary_photo"
+<Khmar> i.e. The tag will look like <div class="primary_photo">
+<Khmar> Inside that, we find the img tag and get the "src" attribute of that
+	tag which will be the image in question.  [16:33]
+<Khmar> We return that.   [16:34]
+<p0werinside> So parsing is done.
+<Khmar> Yup. We have the URL we need to fetch.
+<Khmar> We fetch this using the same fetch_url function that we wrote
+	earlier. http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_3
+								        [16:35]
+<Khmar> You can see the image = fetch_url(image_url) call.  [16:36]
+*** Solvin (310f872d@gateway/web/freenode/ip.49.15.135.45) has quit: Ping
+    timeout: 250 seconds
+<p0werinside> Isn't the name of the function "fetch_url" a bit wrong there?
+	      Now since the purpose is to "fetch the content" of the image
+	      url..  [16:38]
+<p0werinside> nvm
+*** Solvin (310f872d@gateway/web/freenode/ip.49.15.135.45) has joined channel
+    #thelycaeum  [16:39]
+<Khmar> Well, it fetches what a URL points to.  [16:40]
+<Khmar> In the first case, the content is HTML. In the second, an image.
+<Khmar> In both cases, we "fetch the content"  [16:41]
+<Khmar> Makes sense?
+<p0werinside> yeah my bad.
+<Khmar> The code is straightforward. The only special thing is the "with" 
+								        [16:42]
+<Khmar> This is used to "create an environment"
+<Khmar> And you'll have special variables available inside the environment. 
+								        [16:43]
+<Khmar> Also, at the end of the environment, things can be "un done" and
+	variables deleted.
+<Khmar> So you can have things like
+<Khmar> with get_lock():
+<p0werinside> "with" ?
+<Khmar>    do_something()
+<p0werinside> oh
+<Khmar>     with open("image.jpg", "wb") as f:
+<Khmar> 
+<p0werinside> that one.
+<p0werinside> ok
+<Khmar> We could say
+<Khmar> f = open("image.jpg", "wb")
+<Khmar> f.write(image)  [16:44]
+<Khmar> f.close()
+<Khmar> and the effect would be somewhat similar.
+<Khmar> But the "with" idiom is recommended.
+<p0werinside> yeah looks more cleaner too
+<Khmar> Also, if there is other cleanup that's necessary, it will go into the
+	"file" object rather in the user code.
+*** Guest______ (7aac0ca8@gateway/web/freenode/ip.122.172.12.168) has joined
+    channel #thelycaeum  [16:45]
+<Khmar> Now the next thing is to set our wallpaper.   [16:46]
+<Khmar> For this we create a set_desktop_background function
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_4
+<Khmar> Given an image file, it will create a command that sets the background
+	and then run it.  [16:47]
+<Khmar> We use a program called "qiv" to do the background setting.
+<p0werinside> hmm.. uh qiv..
+<p0werinside> Is it a ubuntu thing?
+<Khmar> If yuo're using Ubuntu with gnome, you might have to use
+<Khmar> gsettings set org.gnome.desktop.background picture-uri
+<Khmar> p0werinside: Nope. It's a program that should be there in pacman
+								        [16:48]
+<p0werinside> archlinux here
+<Khmar> Well, there are lots of programs you can use.
+<p0werinside> not there.. what are these things called? wallpaper setters?
+	      I'll google for something equivalent for me
+<Khmar> xloadimage
+<Khmar> qiv
+<Khmar> Do you use Gnome?
+<p0werinside> nope  [16:49]
+<Khmar> Try xsetroot then
+<p0werinside> oh wait
+<p0werinside> got qiv
+<Khmar> ?
+<Khmar> Cool.
+<Khmar> So, if you run qiv --root_s image.jpg, it will set the background to
+	image.jpg  [16:50]
+<p0werinside> let me test..
+<Khmar> okay  [16:51]
+<p0werinside> ok works! nice
+<Khmar> Now, we create that command  [16:52]
+<Khmar> "qiv --root_s %s"image_file will work similar to printf.
+<Khmar> The %s will get substituted by image_file
+<p0werinside> ok %s = string of the image name
+<Khmar> The name of the file that contains the image.  [16:53]
+<p0werinside> yah
+<Khmar> For example, if I say "%d apples and %d oranges"%(10, 15), I'd get
+<Khmar> '10 apples and 15 oranges'
+<Khmar> 
+<p0werinside> ok  [16:54]
+<Khmar> The subprocess module available in the standard library allows us to
+	run external programs. So we import that on top.
+<Khmar> and inside this function, use "subprocess.call" to call this command
+	which we've constructed.
+<Khmar> This requires a list rather than a string as a parameter.
+<Khmar> So we'll need ["qiv", "--root_s", "image.jpg"]  [16:55]
+<Khmar> to be passed to subprocess.call
+<Khmar> Fortunately, all strings in Python have a .split method that will
+	split them on whitespaces.
+<p0werinside> ok
+<Khmar> "The lycaeum".split() will give you ['The', 'lycaeum']
+<Khmar> 
+<p0werinside> understood yeah  [16:56]
+<Khmar> We pass this split string into subprocess.call
+<Khmar> Now try runnig it. It should change your background into that of a
+	rhino.  [16:57]
+<p0werinside> uh how was python's multi line commenting?  [16:58]
+<Khmar> There isn't any multi line commenting. You have to put # at the
+	beginning of every line you want to comment.  [16:59]
+*** Solvin_ (310f872d@gateway/web/freenode/ip.49.15.135.45) has joined channel
+    #thelycaeum
+<p0werinside> oh. ok
+<Khmar> Did it run  [17:00]
+<Khmar> ?
+<p0werinside> uh cleaning up some faulty code i just typed..
+<p0werinside> one sec
+<Khmar> Okay.
+*** Solvin (310f872d@gateway/web/freenode/ip.49.15.135.45) has quit: Ping
+    timeout: 250 seconds  [17:01]
+<p0werinside> Ok I can't run this from the interpreter  [17:02]
+<Khmar> You can directly run it from the command line
+<Khmar> python ng_doc.py
+<p0werinside> yeah.. ok its bg got set  [17:03]
+<p0werinside> lol stretched rhino
+<Khmar> The next step is a little cleanup where we move all the code under the
+	if __name__ block into a function.
+<Khmar> We put all that into a function called "main"
+<Khmar> which returns 0
+<Khmar> and then under the if __name__ part, simply call the main function and
+	return it's value to the operating system using sys.exit  [17:04]
+<p0werinside> Ok. so all done. :)
+<Khmar>
+	http://thelycaeum.in/online-workshops/python-14-Sep-2013/python-14-sep-2013.html#sec-5_5
+								        [17:05]
+<Khmar> You can run this once a day to get a fresh wallpaper every day.
+								        [17:06]
+<p0werinside> wait..why not just use main() under __name__ .. why the
+	      sys.exit()
+<Khmar> It's good practice to return 0 to the operating system if your program
+	ran properly and something non zero if otherwise indicating the error.
+<p0werinside> yeah but won't simply calling main() return the 0 too?
+<Khmar> I'm not sure.   [17:07]
+<Khmar> I don't think so.
+<p0werinside> Ok
+<Khmar> There are 2 enhancements on the site and two pieces of homework. 
+								        [17:08]
+<Khmar> Give them a shot.
+<Khmar> and send your work back to the list.
+<Khmar> I'll post the transcript on the website. 
+<Khmar> Thanks everyone for participating. 
+<p0werinside> Ok. Thanks
+<Khmar> I'll most probably have a Lycaeum office at Chevayoor this
+	month. After that, I can do live classes.  [17:09]
+<Khmar> Stay tuned.
+<Khmar> Bye for now!
+ERC> 

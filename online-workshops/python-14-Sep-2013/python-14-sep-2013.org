@@ -791,6 +791,8 @@ This then goes through the previous flow.
 * Class transcripts
   This workshop was conducted on the following dates. The links go through to the IRC transcripts
   - [[./python-14-sep-2013-transcript.html][14/Sep/2013]]
-  - [[./python-21-sep-2013-transcript.txt][21/Sep/2103]]
+  - [[./python-21-sep-2013-transcript.txt][21/Sep/2103]] 
+  - [[./python-05-oct-2013-transcript.txt][05/Oct/2103]]
+    
 
 
