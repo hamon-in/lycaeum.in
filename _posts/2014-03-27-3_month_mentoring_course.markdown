@@ -11,7 +11,7 @@ I've been working on a long term course for fresh grads and undergrad college st
 
 The first part of the course covers basic skills that are useful to any programmer. Using a UNIX command line, shell scripting and basic tools like `make`, git for version control and Python (which is the language used in the project mentioned later).
 
-### Month 2 : Project (approx 5-6 weeks)
+### Part 2 : Project (approx 5-6 weeks)
 
 This is a small sized project to get people familiar with design and development of a program. The general idea is to break the students into teams of 2 or 3 (preferably across colleges) and then to spend some time discussing design, trade offs and other such issues and then to finally have the students work on the project with constant feedback and criticism. The plan is to let people make mistakes and then face up to how those mistakes affect the project as a whole rather than the guide people to avoid errors. Issues like testing, documentation etc. will be covered in this month.
 
@@ -19,7 +19,7 @@ I have a few projects in mind some of which are web based and some of which are 
 
 At the end of this, all teams will have to present their project along with design decisions and functionality to everyone else.
 
-### Month 3 : Code comprehension (approx 2 weeks)
+### Part 3 : Code comprehension (approx 2 weeks)
 
 A lot of otherwise talented students don't read much code and so, when dropped into a largish project, find themselves lost. This part of the course will focus on taking an existing open source project, reading and understanding it. We'll try to make some changes to the code, adding some features and perhaps even fixing a few bugs to send back pull requests. This will probably be a C project. My current plan is to do this on redis which is a well written piece of software.
 
