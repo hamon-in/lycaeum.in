@@ -47,6 +47,15 @@ The course costs Rs. 25000 to be paid in advance.
 
 If you're interested, please fill in [this form](https://docs.google.com/forms/d/1AoQJl553DJ3DnoVj_Z_wyHHmPcACjss9ZTPEK5nzTPM/viewform). This is not a final registration. It's merely to judge interest and to finalise details.
 
+## Further information
+
+You can [contact me](http://thelycaeum.in/contact.html) if you have any questions about the course.
+
+
+## Spread the word.
+
+Please spread the word about the course. If you know any groups or individuals who might be interested, please let them know. Thanks!
+
 
 
 
