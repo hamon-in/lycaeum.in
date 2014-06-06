@@ -31,13 +31,15 @@ The participants shouldn't be absolute fresher programmers. They should know the
 
 This will not be a conventional 10-5 course in a school. We will have contact classes approximately once a week in Kozhikode and will stay in touch via. email and live online sessions. Participants will have to drive themselves and be proactive about asking questions and getting feedback on their work.
 
-## Placement
+## What do you gain?
 
-There is no guarantee of placement but many companies have expressed interest in hiring students and if they work through the course properly, there is a good chance of placement. 
+I've designed the course specifically to build a strong foundation based on effort and actual work (as opposed to purely theoretical study). The material has been designed based on feedback from several people in the industry and academia. The idea is that once you work through the course, you'll be in a frame of mind to directly jump into an actual software team and be productive.
+
+There's no official guarantee of placement but several companies have expressed interest in hiring students that go through the course. So, if you work through the material properly, there's a good chance that you'll be placed. 
 
 ## Dates and duration
 
-The course will start in late May/early June and will last for 3 months. Based on the rate of progress, it might extend by a week or two. The contact classes and online live sessions will be at fixed times but I will be available to answer questions by email at any time. I will send follow ups about the exact date to [The Lycӕum mailing list](https://groups.google.com/forum/#!forum/the-lycaeum).
+The course will start in mid June and will last for 3 months. Based on the rate of progress, it might extend by a week or two. The contact classes and online live sessions will be at fixed times but I will be available to answer questions by email at any time. I will send follow ups about the exact date to [The Lycӕum mailing list](https://groups.google.com/forum/#!forum/the-lycaeum).
 
 ## Fees
 
@@ -50,7 +52,6 @@ If you're interested, please fill in [this form](https://docs.google.com/forms/d
 ## Further information
 
 You can [contact me](http://thelycaeum.in/contact.html) if you have any questions about the course.
-
 
 ## Spread the word.
 
