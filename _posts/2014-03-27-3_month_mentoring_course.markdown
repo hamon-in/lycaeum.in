@@ -41,10 +41,6 @@ There's no official guarantee of placement but several companies have expressed 
 
 The course will start in mid June and will last for 3 months. Based on the rate of progress, it might extend by a week or two. The contact classes and online live sessions will be at fixed times but I will be available to answer questions by email at any time. I will send follow ups about the exact date to [The Lycӕum mailing list](https://groups.google.com/forum/#!forum/the-lycaeum).
 
-## Fees
-
-The course costs Rs. 25000 to be paid in advance. 
-
 ## Registration
 
 If you're interested, please fill in [this form](https://docs.google.com/forms/d/1AoQJl553DJ3DnoVj_Z_wyHHmPcACjss9ZTPEK5nzTPM/viewform). This is not a final registration. It's merely to judge interest and to finalise details.
