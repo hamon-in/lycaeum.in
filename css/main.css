@@ -96,5 +96,39 @@ blockquote {
              
  }
 
+table {
+    border: 1px solid #ccc;
+    font-family: 'Quando', serif;
+    margin: 2em;
+
+}
+
+table tr {
+    border-bottom: 1px solid #ccc;
+}
+table th, table td {
+    padding: 0.2em 2em 0.2em 0.5em;
+    text-align: left;
+}
+
+table tr td:first-child {
+    width: 8em;
+}
+
+table th {
+    background-color: #fafafa;
+    margin: 0;
+    padding:0;
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+table th.h1 {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    font-size: 1.2em;
+}
+
 
 
