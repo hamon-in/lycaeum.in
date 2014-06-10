@@ -129,7 +129,7 @@ come prepared and make full use of the time.
 Placement discussions will begin after the project. I'll be able to put you in touch with interested (and interesting) companies once you've finished your project.
 
 
-The registrations will close on the 14 of June. If you're interested in signing up, please visit [https://docs.google.com/forms/d/1AoQJl553DJ3DnoVj_Z_wyHHmPcACjss9ZTPEK5nzTPM/viewform](this page) and fill in the form. The number of seats are limited so please do so at the earliest.
+The registrations will close on the 14 of June. If you're interested in signing up, please visit [this page](https://docs.google.com/forms/d/1AoQJl553DJ3DnoVj_Z_wyHHmPcACjss9ZTPEK5nzTPM/viewform) and fill in the form. The number of seats are limited so please do so at the earliest.
 
 
 
