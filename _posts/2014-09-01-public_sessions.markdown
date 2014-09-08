@@ -4,6 +4,8 @@ title: "Public sessions"
 date: "2014-09-01 09:05:48 +0530"
 ---
 
+*Updated on 8/Sep/2014 - The session will be on the 14 of Sep (and not 13 as initially announced).*
+
 I had blogged earlier about public sessions on topics of general
 interest. The first such one is ready and it's on game programming.
 
@@ -12,7 +14,7 @@ games like sprites, input control, simple AI, graphics, sounds etc.
 
 This will use Python + PyGame.
 
-The session will be on the 13th of September 2014 at [The Lycaeum](http://thelycaeum.in/contact.html).
+The session will be on the 14th of September 2014 at [The Lycaeum](http://thelycaeum.in/contact.html).
 
 The current plan is to do it from 10:00 to 13:30. Please subscribe the [mailing list](http://thelycaeum.in/resources.html) to stay notified about changes.
 
