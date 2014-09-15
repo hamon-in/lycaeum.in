@@ -4,6 +4,7 @@ title: "Public sessions"
 date: "2014-09-01 09:05:48 +0530"
 ---
 
+*Updated on 15/Sep/2014 - The session was concluded and code is put online.*
 *Updated on 8/Sep/2014 - The session will be on the 14 of Sep (and not 13 as initially announced).*
 
 I had blogged earlier about public sessions on topics of general
@@ -21,3 +22,5 @@ The current plan is to do it from 10:00 to 13:30. Please subscribe the [mailing 
 If you're interested, please fill in [this form](https://docs.google.com/forms/d/1guydgZMTtsqNd25vU8tbut9L2j51ej52cD-ieoT8np0/viewform). The number of seats are limited so please don't fill in the form unless you're sure you're coming.
 
 See you there!
+
+*Update:* This session was concluded on 14/Sep and the code is available at https://github.com/TheLycaeum/pygame
