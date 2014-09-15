@@ -23,4 +23,4 @@ If you're interested, please fill in [this form](https://docs.google.com/forms/d
 
 See you there!
 
-*Update:* This session was concluded on 14/Sep and the code is available at https://github.com/TheLycaeum/pygame
+*Update:* This session was concluded on 14/Sep and the code is available at [https://github.com/TheLycaeum/pygame](https://github.com/TheLycaeum/pygame).
