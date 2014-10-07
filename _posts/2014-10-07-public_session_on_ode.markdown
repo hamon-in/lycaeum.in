@@ -17,3 +17,4 @@ If you're interested, please sign up on [this form](https://docs.google.com/form
 * We're going to use Python so atleast a passing familiarity with the language is necessary.
 * The examples will use PyGame for animation. I'll quickly mention what's going on but knowing how to use PyGame will make understanding easier.
 
+I'm going to spend a lot of time explaining things so even if you're an inexperienced programmer, you'll be able to pick up some interesting ideas to tinker with. 
