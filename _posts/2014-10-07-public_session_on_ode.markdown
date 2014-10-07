@@ -11,3 +11,9 @@ We're going to use the Python bindings for ODE to create a series of simple prog
 The session will be on 19 October (Sunday) at The Lycaeum. We'll start around 10:00 and wind up around 13:30. I have some plans to make this into a little bit of a workshop along with exercises. If that's the case, it'll be a whole day event with a lunch break but as it stands now, it's a half day thing with just me lecturing and describing the library.
 
 If you're interested, please sign up on [this form](https://docs.google.com/forms/d/15ZA5bkFvXGv2npjHQO0odKZbET6jFGUWI75C9kT_Cfw/viewform). The number of seats are limited so please sign up only if you're sure you're coming.
+
+## Prerequisites
+
+* We're going to use Python so atleast a passing familiarity with the language is necessary.
+* The examples will use PyGame for animation. I'll quickly mention what's going on but knowing how to use PyGame will make understanding easier.
+
