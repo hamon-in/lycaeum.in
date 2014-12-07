@@ -10,7 +10,7 @@ We covered several basic skills like touch typing, UNIX, using an editor properl
 
 I'm now calling for new batch of students. If you have any questions about the course, please [contact me](http://thelycaeum.in/contact.html). If you're genuinely interested in registering, please fill in [the registration form](https://docs.google.com/forms/d/1IGzbzr6PjGOqrja0FAHizod3Em7a57lQ7ToLeM0zYSw/viewform). To stay upto date about this and any other courses that I conduct, please sign up on the [lycaeum mailing list](https://groups.google.com/forum/#!forum/the-lycaeum).
 
-The course is designed for people who are interested in programming and who have some basic experience with it. November is going to be exam season for most colleges in Kerala so the course will probably start somewhere in mid to late December.
+The course is designed for people who are interested in programming and who have some basic experience with it. November was exam season for most colleges in Kerala. This announcement goes out in December and the course will probably start somewhere in mid to late January.
 
 
 
