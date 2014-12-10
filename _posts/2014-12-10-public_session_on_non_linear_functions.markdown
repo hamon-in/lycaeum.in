@@ -10,4 +10,4 @@ I'm planning to do a little class on the behaviour of non linear functions when 
 
 This might sound a little technical but apart from basic knowledge of mathematical functions and how to plot them on graphs, you don't need anything to appreciate the concepts behind the topic.
 
-See you all there and do help by spreading the word.
+We'll start at 10:00 am and wrap up by lunchtime. If it gets interesting, we can think about prolonging it. See you all there and do help by spreading the word.
