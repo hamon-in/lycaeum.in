@@ -7,6 +7,7 @@ date: "2014-03-27 10:29:47 +0530"
 I've been working on a long term course for fresh grads and undergrad college students that covers a number of skills that are useful in the marketplace today. This post is about the course and what it's going to cover.
 
 ## Contents
+
 ### Part 1 : Languages and tools (approx 3-4 weeks)
 
 The first part of the course covers basic skills that are useful to any programmer. Using a UNIX command line, shell scripting and basic tools like `make`, git for version control and Python (which is the language used in the project mentioned later).
