@@ -34,7 +34,7 @@ You can try running this for 0 and see that it really is a fixed point. An inter
 
 The second interesting thing you can see in an orbit is what's called a set of `periodic points`. This is, for example `-1` under f(x) = 1/x. The orbit will look like this -1, 1, -1, 1, -1, 1, ... -1 is a periodic point with `prime period` 2. This means that you'll get back to -1 after 2*n iterations for any value of n greater than 0.
 
-The next thing that's interesting is points that are eventually fixed and eventually periodic. For example, -1 is eventually fixed under f(x) = x<sup>2</sup>. This means, that the orbit will reach a fixed point and stay there. There are points that will hit a periodic point and then stay there.
+The next thing that's interesting is points that are eventually fixed and eventually periodic. For example, -1 is eventually fixed under f(x) = x<sup>2</sup>. This means, that the orbit will reach a fixed point and stay there. Similarly, there are points that will hit a periodic point and then stay there.
 
 This gives us some ground work. Then we take our first non linear function, the [logistic map](https://en.wikipedia.org/wiki/Logistic_map) and then use it to see how things behave. The function is simply
 
@@ -71,6 +71,6 @@ You can see the periodic orbit when you see the animation happen.
 
 We then discussed how this behaviour can be plotted and analysed in various ways and wound up. I'll probably be doing a part two of the same presentation where we talk about bifurcations and bifurcation plots, move the iteration to the complex plane and then enter the world of fractals.
 
-If you're interested in following my presentations, do stay in touch using one of the methods mentioned at http://thelycaeum.in/contact.html.
+If you're interested in following my presentations, do stay in touch using one of the methods mentioned at [the contact page](http://thelycaeum.in/contact.html).
 
 Also, I'm conducting a repeat of my mentoring course. If you want details or to sign up, please head on to the [courses](http://thelycaeum.in/courses.html) page. 
