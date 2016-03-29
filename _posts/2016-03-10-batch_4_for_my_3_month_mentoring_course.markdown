@@ -10,3 +10,5 @@ To sign up for the course, please sign up [here](http://goo.gl/forms/i3jX53v9GP)
 
 If you want to get in touch for further details, you can [contact me](http://thelycaeum.in/contact.html). 
 
+*Update*:
+I'm moving this course by a month so it will start in early May and end in early August. 
