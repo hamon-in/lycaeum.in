@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Public session on GPG"
+title: "Public session on GPG (on 22 May 2016)"
 date: "2016-05-12 17:51:46 +0530"
 ---
 
 I'm planning a public session on [GPG](https://www.gnupg.org/) and
-related concepts on the 22nd of this month. I'm hoping to introduce a
+related concepts on the 22/May/2016. I'm hoping to introduce a
 few basic ideas about cryptography like encryption - symmetric and
 asymmetric, public key cryptography, web of trust etc.
 
