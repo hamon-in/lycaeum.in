@@ -130,5 +130,7 @@ table th.h1 {
     font-size: 1.2em;
 }
 
-
+ul.posts li span {
+    font-family: monospace;
+}
 

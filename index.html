@@ -13,6 +13,12 @@ For details of the courses which we conduct, please head on to the <a href="./co
 <a href="http://students.thelycaeum.in">students.lycaeum.in/blog</a> has the students blog.
 </p>
 
-<h3 class="text-center"> Announcements </h3>
-Taking registrations for a <a href="http://thelycaeum.in/blog/2016/09/11/batch_5_for_3_month_mentoring_course/">new batch</a> for my 3 month mentoring course.
+<h3 class="text-center"> Latest posts </h3>
+  <ul class="posts">
+    {% for post in site.posts limit:3 %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="/blog/index.html">All posts </a>
+
 
