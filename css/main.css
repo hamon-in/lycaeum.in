@@ -111,9 +111,9 @@ table th, table td {
     text-align: left;
 }
 
-table tr td:first-child {
-    width: 8em;
-}
+/* table tr td:first-child { */
+/*     width: 8em; */
+/* } */
 
 table th {
     background-color: #fafafa;
@@ -122,12 +122,21 @@ table th {
     font-family: 'Josefin Slab', serif;
     text-align: center;
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 table th.h1 {
     border: 1px solid #ccc;
     background-color: #eee;
-    font-size: 1.2em;
+}
+
+table th.h2 {
+    padding: 0.2em 2em;
+}
+
+table td {
+    padding: 1em;
+    font-size: 0.8em;
 }
 
 ul.posts li span {

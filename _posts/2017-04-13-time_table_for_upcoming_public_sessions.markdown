@@ -9,20 +9,24 @@ These are all free of charge although we do ask that you register. The sessions 
 
 <table>
 <tr>
-    <th class="h1"> 22 April 2017 </th> <th class="h2"> Introduction to UNIX shell programming </th>
+<th class="h2"> 22 April 2017 </th> <th class="h2" > Introduction to UNIX shell programming </th>
 </tr>
 <tr> 
-<td colspan="2"> This is suitable for newcomers. You'll get an introduction to UNIX shell programming. </td>
+ <td colspan="2"> This is suitable for newcomers. You'll get an introduction to UNIX shell programming. </td>
 </tr>
 
 <tr>
-<th class="h1"> 29 April 2017 </th> <th class="h2"> Introduction to Python programming </th>
+<th class="h2"> 29 April 2017</th> <th class="h2" > Introduction to Python programming </th>
+</tr>
+<tr> 
+ <td colspan="2"> This is also suitable for newcomers. You'll get a quick introduction to basic python programming.</td>
 </tr>
 <tr>
-<td colspan="2">
-This is also suitable for newcomers. You'll get a quick introduction to basic python programming.
-</td>
+<th class="h2" colspan="2"> /th>
 </tr>
+<tr>
+<th class="h1"> </th> 
+<td>
   
 <tr>
 <th class="h1"> 6 May 2017 </th> <th class="h2"> Game programming in python using PyGame </th>
