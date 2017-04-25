@@ -8,32 +8,27 @@ Great news everyone! We're releasing a time table for upcoming public sessions a
 These are all free of charge although we do ask that you register. The sessions we've planned are as follows
 
 <table>
+
 <tr>
-<th class="h2"> 22 April 2017 </th> <th class="h2" > Introduction to UNIX shell programming </th>
+<th class="h1"> 6 May 2017 </th> <th class="h2" > Introduction to UNIX shell programming </th>
 </tr>
 <tr> 
  <td colspan="2"> This is suitable for newcomers. You'll get an introduction to UNIX shell programming. </td>
 </tr>
 
 <tr>
-<th class="h2"> 29 April 2017</th> <th class="h2" > Introduction to Python programming </th>
+<th class="h1"> 13 May 2017 </th> <th class="h2" > Introduction to Python programming </th>
 </tr>
 <tr> 
  <td colspan="2"> This is also suitable for newcomers. You'll get a quick introduction to basic python programming.</td>
 </tr>
+
 <tr>
-<th class="h2" colspan="2"> /th>
-</tr>
-<tr>
-<th class="h1"> </th> 
-<td>
-  
-<tr>
-<th class="h1"> 6 May 2017 </th> <th class="h2"> Game programming in python using PyGame </th>
+<th class="h1"> 20 May 2017</th> <th class="h2"> Game programming in python using PyGame </th>
 </tr>
 <tr>
 <td colspan="2">
-You'll need basic Python python knowledge to attend this session. At the end, we'll make simple vertical scrolling shooting game complete with sound effects and music.
+You'll need basic Python knowledge to attend this session. At the end, we'll make simple vertical scrolling shooting game complete with sound effects and music.
 </td>
 </tr>
   
@@ -55,14 +50,6 @@ This is suitable for newcomers. <a href="https://golang.org/">Go</a> is an upcom
 </td>
 </tr>
   
-<tr>
-<th class="h1"> 10 June 2017 </th> <th class="h2"> Basics of the Linux Kernel </th>
-</tr>
-<tr>
-<td colspan="2">
-This is a short session describing the linux Kernel. You'll build your own kernel making small modifications using the config system, boot using it and understand how things work at the kernel level.
-</td>
-</tr>
 </table>
 
 Please fill in the registration form below if you're interested in attending any of the sessions. A blog post will come up on the site giving details of the sessions as they near. You'll receive emails on how to set up your computer so that you can participate in the sessions.
