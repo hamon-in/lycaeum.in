@@ -88,6 +88,11 @@ h3 {
 
  }
 
+h4 { 
+     text-align: left;
+     font-family: 'Josefin Slab', serif;
+ }
+
 
 blockquote { 
              font-size: 0.8em;
