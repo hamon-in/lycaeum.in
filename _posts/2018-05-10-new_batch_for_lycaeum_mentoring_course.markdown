@@ -54,7 +54,7 @@ You will have to present the project to the whole team at the end of the period.
 <th class="h1"> Code comprehension</th>
 </tr>
 <tr> 
-<td colspan="2"> This is a smaller project where the students are given a medium sized project with a request to add an feature or fix a bug. They¡¯ll have to study the project and then make the requested change. This will give students the confidence to read and understand someone elses code.
+<td colspan="2"> This is a smaller project where the students are given a medium sized project with a request to add an feature or fix a bug. They'll have to study the project and then make the requested change. This will give students the confidence to read and understand someone elses code.
 </td>
 </tr>
 
