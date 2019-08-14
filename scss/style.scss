@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Ubuntu:300,400,500,700&display=swap');
+
+body {
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 26px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.bg-red {
+    background: #ff0000;
+}
+
+.bg-dark {
+    background: #282828;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+.btn-theme {
+    background: #ff0000;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 11px 30px;
+
+    &:hover {
+        color: #fff;
+        background: #282828;
+    }
+}
+
+$bg: #0BAAD4;
+$hover: darken($bg, 10%);
+
+a {
+    position: relative;
+
+    .link {
+        padding-top: 10px;
+
+        &:before {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: $hover;
+            transform: scaleX(0);
+        }
+
+        &:hover:before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.ptb-5 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.p-10 {
+    padding: 5rem !important;
+}
+
+.mb-10 {
+    margin-bottom: 5rem;
+}
+
+header {
+    nav {
+        font-size: 0.85rem;
+
+        &:hover {
+            color: #ff0000;
+        }
+    }
+
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #ff0000;
+    }
+
+    .navbar-light .navbar-nav .active > .nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show > .nav-link {
+        color: #ff0000;
+    }
+}
+
+.hb {
+    position: relative;
+
+    .carousel-caption {
+        text-align: left;
+        left: 0;
+        right: 0;
+        padding-bottom: 50%;
+
+        p {
+            font-size: 16px;
+        }
+
+        a.link {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 13px;
+            padding: 10px;
+        }
+    }
+
+    .followus {
+        position: absolute;
+        bottom: 6rem;
+        right: 1rem;
+        color: #fff;
+
+        ul {
+            li {
+                margin-left: 32px;
+
+                a {
+                    color: #fff;
+
+                    &:hover {
+                        color: #ff0000;
+                    }
+                }
+            }
+
+            span {
+                transform: rotate(-90deg);
+                display: inline-block;
+                font-size: 12px;
+                margin: 40px 0 0 0;
+            }
+        }
+    }
+    .map-relative{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+    }
+}
+
+.skillgap-bg {
+    background-image: url(../img/skills-gap.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50%;
+}
+
+.h-red-testi {
+    padding: 9rem 10rem;
+    text-align: justify;
+    color: #fff;
+    margin-right: -60px;
+    position: relative;
+    z-index: 1;
+}
+
+.h-dark-testi {
+    padding: 9rem 10rem 10.6rem 12rem;
+    text-align: justify;
+    color: #fff;
+    position: absolute;
+    right: 0;
+}
+
+.testi-bg {
+    background-image: url(../img/testi-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding: 6rem 0;
+    margin-top: 5.8rem;
+
+    .carousel-indicators {
+        position: relative;
+
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            opacity: 1;
+        }
+
+        .active {
+            background-color: #ff0000;
+        }
+    }
+}
+
+.people {
+    a {
+        color: #282828;
+
+        &:hover {
+            text-decoration: none;
+            opacity: 0.9;
+            transition: all 0.3s ease-in-out;
+
+            small {
+                color: #ff0000;
+            }
+        }
+
+    }
+}
+
+.approch-bg {
+    background-image: url(../img/approch-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+
+    .enskill {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        top: -80px;
+        padding: 6rem 10rem;
+        text-align: justify;
+    }
+}
+
+.mentoring {
+
+    text-align: justify;
+
+    ul {
+        li {
+            background-image: url(../img/_ionicons_svg_md-checkmark-circle-outline.svg);
+            padding-left: 2rem;
+            background-repeat: no-repeat;
+            background-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.accept-reg {
+    background: #000;
+    color: #fff;
+    border-bottom: 10px solid #ff0000;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 3rem;
+}
+
+.blg {
+    transition: all 0.5s ease-in-out;
+
+    .blg-date {
+        color: #ff0000;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .blg-img {
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        height: 255px;
+        overflow: hidden;
+    }
+
+    a.link {
+        color: #ff0000;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    &:hover .blg-img {
+        transition: all 0.5s ease-in-out;
+        -webkit-filter: grayscale(0%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+    }
+}
+
+footer {
+    background: #000;
+    color: #fff;
+
+    .subscribe {
+        background: #ff0000;
+        padding: 4rem;
+        position: relative;
+        top: -80px;
+
+        .form-control {
+            background: none;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            padding-left: 0;
+            padding-right: 0;
+
+
+        }
+
+        ::placeholder {
+            color: #fff;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+        }
+
+        a {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #fff;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .quicklink {
+        a {
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: #ff0000;
+            }
+        }
+    }
+
+    .copyright {
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.35);
+        font-size: 11px;
+
+        a {
+            color: rgba(255, 255, 255, 0.35);
+            text-decoration: none;
+
+            &:hover {
+                color: rgba(255, 0, 0, 1);
+            }
+        }
+    }
+}
+
+.about-monials {
+    padding: 5rem;
+    color: #fff;
+    position: relative;
+    top: -25%;
+    background: #ff0000;
+
+
+    .carousel-indicators {
+        position: relative;
+        bottom: -45px;
+
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            opacity: 1;
+        }
+
+        .active {
+            background-color: #282828;
+        }
+    }
+}
+
+.enskill {
+    padding: 0 0 5rem 0;
+    position: relative;
+
+}
+.form-control{
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #282828;
+    padding-left: 0;
+    padding-right: 0;
+}
+.contact-form{
+    padding-bottom: 8rem !important;
+}

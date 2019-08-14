@@ -1,33 +1,348 @@
 ---
-layout: default
+layout: base
 title: Welcome
 ---
 
+<div class="hb" data-aos="fade-in">
+    <div id="hb" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/home_banner.jpg" class="d-block w-100 img-fluid" alt="hb">
+                <div class="container">
+                    <div class="col-lg-5">
+                        <div class="carousel-caption" data-aos="fade-up">
+                            <h1 class="mb-4">Registrations open!</h1>
+                            <p class="mb-4 d-none d-md-block">Registrations for the Jan 2019 batch of the mentoring course are now open.</p>
+                            <a class="btn btn-theme" href="https://forms.zohopublic.com/noufal/form/CourseApplicationAug2019/formperma/byv583ih9WvU9kwAeh5ya05oIDz0v8KXKqOIJigrbrg?referrername=lycaeum" target="_blank">Register</a> <a href="/contact.html" class="link">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="followus" data-aos="fade-down">
+        <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/pages/The-Lycaeum/474926682642815" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+            <li><a href="https://twitter.com/thelycaeum" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+<!--
+            <li><a href=""><i class="icon ion-logo-instagram"></i></a></li>
+            <li><a href=""><i class="icon ion-logo-linkedin"></i></a></li>
+-->
+            <span>FOLLOW&nbsp;US</span>
+        </ul>
 
-<p>The Lycӕum is an experimental educational endeavour started in 2013. It is currently based in Kozhikode, Kerala and focusses (for now) on IT education.</p>
-<p><a href="http://en.wikipedia.org/wiki/Lyceum_(Classical)">The original Lycӕum</a> was a school founded by the great Greek philosopher Aristotle in 335 BC. We aim to kindle the same interest in learning and personal growth that it did. </p>
-
-<p>
-For details of the courses which we conduct, please head on to the <a href="./courses.html">courses page</a>.
-</p>
-<p>
-<a href="http://students.thelycaeum.in">students.lycaeum.in/blog</a> has the students blog.
-</p>
-
-<div class="alert alert-primary text-center">
-<h2> Registrations open for Software Bootcamp - Sep 2019 batch</h2>
-<hr/>
-<p> The Lycӕum's successful mentoring program has been revamped and is being offerred as a 5 month intensive bootcamp.</p>
-<p> <a class="btn btn-info" href="https://forms.zohopublic.com/noufal/form/CourseApplicationAug2019/formperma/byv583ih9WvU9kwAeh5ya05oIDz0v8KXKqOIJigrbrg?referrername=lycaeum ">Register here</a>
-</p>
+    </div>
 </div>
+<section class="ptb-5 skillgap-bg" data-aos="fade-up">
+    <div class="container">
+        <div class="row h-100">
+            <div class="col-lg-5" data-aos="fade-right">
+                <h2 class="mb-5"><span class="d-none d-lg-inline">Welcome to<br></span>Lycaeum</h2>
+                <p class="mb-5 text-lg-justify">The Lycaeum’s history can be traced back to 334 BC. Just the way the famous Athenian master Aristotle and prominent philosophers of the times used the Lycaeum as a center of debate and pursuit of knowledge, the Lycaeum was established in 2013 in Kozhikode, Kerala to foster technical excellence among engineering students. The Lycaeum has been the space where programmers are created through training, mentoring, discussing and debating. </p>
+                <p><a href="/about.html" class="btn btn-theme">see more about us</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ptb-5" data-aos="fade-up">
+    <div class="container">
+        <div class="row justify-content-end no-gutter">
+            <div class="w-md-50 pr-4 pr-lg-0 pl-4 pl-md-0">
+                <h2 class="mb-4">Problem</h2>
+                <p class="text-justify">Indian engineering education is in a crisis due to the <b>Skill Gap</b> problem. What students are taught in their engineering college is not exactly what the industry requires. The problem is exacerbated as instructors in engineering colleges lack industry experience even though they are great academics</p>
+            </div>
+            <div class="w-md-50 d-lg-none d-md-block">
+                <img src="img/skills-gap.png" alt="skillgap" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="w-md-50 position-relative" data-aos="fade-up">
+                <div class="bg-red h-red-testi">
+                    <p>“ There are 162 engineering colleges in Kerala with a total capacity of 62,700 seats. During 2015-16, 41,191 students were admitted to various courses, of which 11,210 have found jobs</p>
+                    <p><b>– The Hindu (January 2018)</b></p>
+                </div>
+            </div>
+            <div class="w-md-50 bg-dark h-dark-testi" data-aos="fade-down">
+                <div class="">
+                    <p>“ According to the HRD ministry, India has 6,214 engineering and technology institutions which are enrolling 2.9 million students. Around 1.5 million engineers are released into the job market every year. But the dismal state of higher education in India ensures that they simply do not have adequate skills to be employed” </p>
+                    <p><b>- Indiatoday</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testi-bg" data-aos="fade-up">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="testimonials">
+                    <h2 class="mb-5">Testimonials</h2>
+                    <div id="testi-slide" class="carousel slide" data-ride="carousel">
 
-<h3 class="text-center"> Latest posts </h3>
-  <ul class="posts">
-    {% for post in site.posts limit:3 %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-  <a href="/blog/index.html">All posts </a>
+                        <div class="carousel-inner mb-4">
+                            <div class="carousel-item active">
 
+                                <p class="mb-3">Before attending the Lycaeum mentoring course, I was dabbling
+                                    in a lot of technologies without proper aim or plan. Noufal sir’s
+                                    guidance and mentorship helped me to focus on the fundamentals
+                                    and gave clarity on how to approach software development. The
+                                    course provided a strong foundation and looking back I can
+                                    see how much it has benefited me in my career. I would highly
+                                    recommend budding developers to take this course and benefit
+                                    from the immense knowledge and experience of Noufal sir.</p>
+                                <h5>Syed Suhail Ahmed</h5>
+                                <p><small>July 2014 Batch</small><br>
+                                    Lead Engineer | OrangeScape</p>
+                            </div>
+                            <div class="carousel-item">
 
+                                <p class="mb-3">The programme was great in content and groomed us to work
+                                    as a team. Hats off to Mr.Noufal for his remarkable training
+                                    skills. He always took our questions seriously, never dismissed
+                                    them as wrong, emphasized good answers and provided useful
+                                    examples. The presentations by him were consistently of high
+                                    quality and engaging. I admit this was a stepping stone in my
+                                    career and would surely recommend to my fellow beings. I have
+                                    personally gained a lot of knowledge. It is surely helping me to
+                                    stay in the industry and to constantly improve myself.</p>
+                                <h5>Jubin S Abraham</h5>
+                                <p><small>October 2016 Batch</small><br>
+                                    Software Engineer | MobMe Wireless</p>
+
+                            </div>
+                            <div class="carousel-item">
+
+                                <p class="mb-3">An excellent programme - I learnt a lot. It inspired me to
+                                    rethink the way to approach a problem. I got familiar with lots
+                                    of handy tools for programming and most of all it taught me
+                                    how to systematically approach new programming tools from
+                                    language to libraries to frameworks. Also it gave me a great
+                                    exposure to the open source world.</p>
+                                <h5>Gorbin Philip</h5>
+                                <p><small>July 2014 Batch</small><br>
+                                    Co-Founder | Gridlle Technologies Pvt Ltd</p>
+                            </div>
+                            <div class="carousel-item">
+
+                                <p class="mb-3">I can positively say Lycaeum has made me a better programmer.
+                                    It has helped me develop a deep knowledge of Python and Linux
+                                    environment. Noufal has 15+ years of experience in the industry
+                                    and he gave us a solid idea of proper architecture, tools, and
+                                    best practices.</p>
+                                <h5>Shamlik T</h5>
+                                <p><small>October 2015 Batch</small><br>
+                                    Software Engineer | Intellica</p>
+                            </div>
+                            <div class="carousel-item">
+
+                                <p class="mb-3">It was an awesome experience to say the least, I was really
+                                    in bad place back then. I had to quit my job in Kuwait as a
+                                    Technical Assistant due to some visa issues. I was already 3+
+                                    years after my graduation, started my MCA and dropped it. At
+                                    that time my friend guided me to Lycaeum and Noufal sir made
+                                    me fall in love with programming &amp; I have never looked back
+                                    since then. I’m a happy person now making my living while
+                                    doing something that I love. Everyone considering Lycaeum,
+                                    please go ahead.</p>
+                                <h5>Afzal Shahul Hameed</h5>
+                                <p><small>July 2014 Batch</small><br>
+                                    Software Engineer | MoneySmart</p>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#testi-slide" data-slide-to="0" class="active"></li>
+                            <li data-target="#testi-slide" data-slide-to="1"></li>
+                            <li data-target="#testi-slide" data-slide-to="2"></li>
+                            <li data-target="#testi-slide" data-slide-to="3"></li>
+                            <li data-target="#testi-slide" data-slide-to="4"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-10 people mb-5">
+    <div class="container">
+        <div class="row" data-aos="fade-down">
+            <div class="col-md-12">
+                <h2 class="mb-4 mb-lg-5">People</h2>
+            </div>
+            <div class="col-md-12 col-lg-4 text-justify mb-5 mb-lg-0">
+                The Lycaeum was founded by people who are passionate about education and have deep experience in the tech industry in India and abroad. We intimately know what works in the industry and the required skills that companies look for when hiring candidates. The founders are alumni of NIT Calicut, a top-tier engineering college in India
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4 mb-md-0" data-aos="fade-down" data-aos-delay="300">
+                <a href="">
+                    <img src="img/asifetv.png" alt="asif" class="img-fluid mb-3">
+                    <h6 class="mb-0 text-uppercase">Asif ETV</h6>
+                    <small>Founder</small>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-down" data-aos-delay="600">
+                <a href="">
+                    <img src="img/noufal.png" alt="asif" class="img-fluid mb-3">
+                    <h6 class="mb-0 text-uppercase">Noufal Ibrahim</h6>
+                    <small>Founder</small>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-10 approch-bg" data-aos="fade-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-5 text-justify">
+                <h2 class="mb-4">Approach</h2>
+                <p class="mb-5 mb-lg-0">The Lycaeum follows a hybrid model with physical Lycaeum centers at select locations coupled with online delivery of educational content. Our programs target engineering students and enable them to be skilled up during the course of engineering education. We partner with training cells of engineering colleges and help them make their students competitive in the job market. We have established relationships with companies who will hire students that have gone through our training program as they are industry ready and need not go through separate training</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="enskill bg-red" data-aos="fade-right" data-aos-delay="600">
+        <h2 class="m b-4">Enskill</h2>
+        <p>enSkill is the technology platform designed for facilitating Lycaeum programs. It helps us solve the skill program at a scale. . Already, we have developed an Enskill module to help with on campus placements and it has been deployed at major engineering institutes in India.</p>
+    </div>
+</section>
+<section class="p-10 mentoring">
+    <div class="container">
+        <div class="row mb-10" data-aos="fade-up">
+            <div class="col-md-12">
+                <h2 class="mb-4">Mentoring</h2>
+            </div>
+            <div class="col-lg-6">
+
+                <p>The mentoring program is Lycaeum’s flagship project. Since 2013, the program has helped students to break into the industry. Designed as a finishing school, the mentoring program started as a three month course that has now expanded to a five month long program.</p>
+
+                <p class="mb-5">Students are taken through progressively harder exercises and made familiar with various technologies required by the industry. The structure of the program is described below</p>
+                <ul class="list-unstyled">
+                    <li>
+                        Basic skills like a programming language, familiarity with UNIX, version control etc.
+                    </li>
+                    <li>Programming projects ranging from small practice programs to larger applications where students understand principles of designing software properly, automated testing, project planning and implementation</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul class="list-unstyled">
+                    <li>Web development - Students will build and deploy web applications onto the cloud. They will understand the nuts and bolts of how programs communicate across the internet and not just learn to run a few commands to see a website running</li>
+                    <li>Collaborative projects - Students will be divided into groups that work on different parts of the same application. They will collaborate using email and tools like slack and use a project management tool to understand how to work as a team to achieve a deadline.</li>
+                    <li>
+                        Code comprehension - Code is read more than it’s written. In this module, students will read, understand and write documentation for existing production quality software to become comfortable reading other people’s code.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mb-10" data-aos="fade-up">
+            <div class="col-12">
+                <div class="accept-reg">
+                    We are now accepting registrations for the 10th batch of our mentoring program.
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center" data-aos="fade-up">
+            <div class="col-md-4">
+                <h2>Software Training</h2>
+            </div>
+            <div class="col-md-8">
+                <p>We provide in house and remote software training for freshers inside companies. We have stock courses for corporate audiences as well as custom designed courses that are tailored to client requirements. </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--
+<section class="bg-light p-10">
+    <div class="container pb-5">
+        <div class="row align-items-center mb-10" data-aos="fade-down">
+            <div class="col-md-6">
+                <h2>Blog</h2>
+            </div>
+            <div class="col-md-6 text-right">
+                <a href="" class="btn btn-theme">read all blog</a>
+            </div>
+        </div>
+        <div class="row mb-10">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="blg">
+                    <div class="blg-img mb-4">
+                        <img src="img/blg1.jpg" alt="blg1" class="img-fluid">
+                    </div>
+                    <div class="blg-date mb-3">
+                        10 May 2018
+                    </div>
+                    <div class="blg-head mb-4">
+                        <h4>New batch for Lycaeum <br>
+                            mentoring course</h4>
+                    </div>
+                    <div class="blg-more">
+                        <a href="" class="link">Readmore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="blg">
+                    <div class="blg-img mb-4">
+                        <img src="img/blg2.jpg" alt="blg1" class="img-fluid">
+                    </div>
+                    <div class="blg-date mb-3">
+                        10 May 2018
+                    </div>
+                    <div class="blg-head mb-4">
+                        <h4>Time table for upcoming
+                            public sessions</h4>
+                    </div>
+                    <div class="blg-more">
+                        <a href="" class="link">Readmore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="blg border-right">
+                    <div class="blg-date mb-3">
+                        10 May 2018
+                    </div>
+                    <div class="blg-head mb-4">
+                        <h4>New batch for Lycaeum
+                            mentoring course</h4>
+                    </div>
+                    <div class="blg-more">
+                        <a href="" class="link">Readmore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="blg border-right">
+                    <div class="blg-date mb-3">
+                        10 May 2018
+                    </div>
+                    <div class="blg-head mb-4">
+                        <h4>Time table for upcoming
+                            public sessions</h4>
+                    </div>
+                    <div class="blg-more">
+                        <a href="" class="link">Readmore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                <div class="blg">
+                    <div class="blg-date mb-3">
+                        10 May 2018
+                    </div>
+                    <div class="blg-head mb-4">
+                        <h4>New batch for Lycaeum
+                            mentoring course</h4>
+                    </div>
+                    <div class="blg-more">
+                        <a href="" class="link">Readmore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
