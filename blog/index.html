@@ -21,7 +21,7 @@ layout: base
         <ul class="list-unstyled">
             <li><a href="https://www.facebook.com/pages/The-Lycaeum/474926682642815" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
             <li><a href="https://twitter.com/thelycaeum" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
-<!--
+            <!--
             <li><a href=""><i class="icon ion-logo-instagram"></i></a></li>
             <li><a href=""><i class="icon ion-logo-linkedin"></i></a></li>
 -->
@@ -35,24 +35,26 @@ layout: base
 
         <div class="row">
             {% for post in site.posts %}
-            <div class="col-md-6 mb-10" data-aos="fade-up">
-                <div class="blg">
-                  
-                    <div class="blg-date mb-3">
-                       {{ post.date | date_to_string }}
+            <div class="col-md-6" data-aos="fade-up"> <a href="{{ post.url }}" class="link blg-list bg-light d-block p-5 text-decoration-none">
+                    <div class="blg">
+
+                        <div class="blg-date mb-3">
+                            {{ post.date | date_to_string }}
+                        </div>
+                        <div class="blg-head mb-4">
+                            <h4 class="text-dark">{{ post.title }}</h4>
+
+                        </div>
+                        <div class="blg-more">
+                            <p class="text-muted"> {{post.summary}}</p>
+                        </div>
                     </div>
-                    <div class="blg-head mb-4">
-                        <h4>{{ post.title }}</h4>
-                    </div>
-                    <div class="blg-more">
-                        <a href="{{ post.url }}" class="link">Readmore</a>
-                    </div>
-                </div>
+                </a>
             </div>
             {% endfor %}
-  
-   
-          
+
+
+
         </div>
 
     </div>

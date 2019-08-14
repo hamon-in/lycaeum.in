@@ -8,7 +8,7 @@ title: blog
 
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <h4>{{page.title}}</h4>
+                <h4 class="mb-4">{{page.title}}</h4>
                 {{ content }}
                 {% if page.date %}
                 <p class="meta">Posted on: {{ page.date | date_to_string }} <a id="rss" href="/rss.xml"><img src="/img/rss_icon.png" /></a></p>
