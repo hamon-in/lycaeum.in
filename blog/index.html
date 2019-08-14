@@ -1,13 +1,59 @@
 ---
-layout: post
-title: Blog
+layout: base
 ---
+<div class="hb" data-aos="fade-in">
+    <div id="hb" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/img/home_banner.jpg" class="d-block w-100 img-fluid" alt="hb">
+                <div class="container">
+                    <div class="col-lg-5">
+                        <div class="carousel-caption" data-aos="fade-up">
+                            <h1 class="mb-4"><span class="text-red">Blog</span></h1>
+                            <p class="mb-4 d-none d-md-block">Registrations for the Jan 2019 batch of the mentoring course are now open.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="followus" data-aos="fade-down">
+        <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/pages/The-Lycaeum/474926682642815" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+            <li><a href="https://twitter.com/thelycaeum" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+<!--
+            <li><a href=""><i class="icon ion-logo-instagram"></i></a></li>
+            <li><a href=""><i class="icon ion-logo-linkedin"></i></a></li>
+-->
+            <span>FOLLOW&nbsp;US</span>
+        </ul>
 
-<div id="home">
-  <a id="rss" href="/rss.xml"><img src="/img/rss_icon.png"/></a>
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+    </div>
 </div>
+<section class="bg-light p-10">
+    <div class="container pb-5">
+
+        <div class="row">
+            {% for post in site.posts %}
+            <div class="col-md-6 mb-10" data-aos="fade-up">
+                <div class="blg">
+                  
+                    <div class="blg-date mb-3">
+                       {{ post.date | date_to_string }}
+                    </div>
+                    <div class="blg-head mb-4">
+                        <h4>{{ post.title }}</h4>
+                    </div>
+                    <div class="blg-more">
+                        <a href="{{ post.url }}" class="link">Readmore</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+  
+   
+          
+        </div>
+
+    </div>
+</section>
